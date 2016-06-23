@@ -7,21 +7,70 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F3E47C3D1D1BD666001FE3D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C3C1D1BD666001FE3D6 /* AppDelegate.swift */; };
-		F3E47C3F1D1BD666001FE3D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C3E1D1BD666001FE3D6 /* ViewController.swift */; };
-		F3E47C421D1BD666001FE3D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3E47C401D1BD666001FE3D6 /* Main.storyboard */; };
 		F3E47C441D1BD666001FE3D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3E47C431D1BD666001FE3D6 /* Assets.xcassets */; };
 		F3E47C471D1BD666001FE3D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3E47C451D1BD666001FE3D6 /* LaunchScreen.storyboard */; };
+		F3E47C521D1BD86C001FE3D6 /* Top.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C511D1BD86C001FE3D6 /* Top.swift */; };
+		F3E47C551D1BD87A001FE3D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C541D1BD87A001FE3D6 /* AppDelegate.swift */; };
+		F3E47C571D1BD900001FE3D6 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C561D1BD900001FE3D6 /* TopView.swift */; };
+		F3E47C591D1BD96E001FE3D6 /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C581D1BD96E001FE3D6 /* Views.swift */; };
+		F3E47C5C1D1BDA0A001FE3D6 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C5B1D1BDA0A001FE3D6 /* UIView.swift */; };
+		F3E47C5E1D1BDA3B001FE3D6 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C5D1D1BDA3B001FE3D6 /* Colors.swift */; };
+		F3E47C6A1D1BDA6D001FE3D6 /* SExp.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C611D1BDA6D001FE3D6 /* SExp.m */; };
+		F3E47C6B1D1BDA6D001FE3D6 /* SExpIO.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C631D1BDA6D001FE3D6 /* SExpIO.m */; };
+		F3E47C6C1D1BDA6D001FE3D6 /* SExpTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C651D1BDA6D001FE3D6 /* SExpTokenizer.m */; };
+		F3E47C6D1D1BDA6D001FE3D6 /* SExpValidityChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C671D1BDA6D001FE3D6 /* SExpValidityChecker.m */; };
+		F3E47C6E1D1BDA6D001FE3D6 /* SimpleUnicharInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C691D1BDA6D001FE3D6 /* SimpleUnicharInputStream.m */; };
+		F3E47C711D1BDAE2001FE3D6 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C701D1BDAE2001FE3D6 /* ColorPalette.swift */; };
+		F3E47C741D1BDAFE001FE3D6 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = F3E47C721D1BDAFE001FE3D6 /* fonts */; };
+		F3E47C751D1BDAFE001FE3D6 /* settings in Resources */ = {isa = PBXBuildFile; fileRef = F3E47C731D1BDAFE001FE3D6 /* settings */; };
+		F3E47C791D1BDBFE001FE3D6 /* NSMutableArray+Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C781D1BDBFE001FE3D6 /* NSMutableArray+Stack.m */; };
+		F3E47C831D1BDF4E001FE3D6 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C7B1D1BDF4E001FE3D6 /* CGPoint.swift */; };
+		F3E47C841D1BDF4E001FE3D6 /* CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C7C1D1BDF4E001FE3D6 /* CGRect.swift */; };
+		F3E47C851D1BDF4E001FE3D6 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C7D1D1BDF4E001FE3D6 /* Double.swift */; };
+		F3E47C861D1BDF4E001FE3D6 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C7E1D1BDF4E001FE3D6 /* Int.swift */; };
+		F3E47C871D1BDF4E001FE3D6 /* NSDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C7F1D1BDF4E001FE3D6 /* NSDate.swift */; };
+		F3E47C881D1BDF4E001FE3D6 /* NSRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C801D1BDF4E001FE3D6 /* NSRange.swift */; };
+		F3E47C891D1BDF4E001FE3D6 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C811D1BDF4E001FE3D6 /* String.swift */; };
+		F3E47C8A1D1BDF4E001FE3D6 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C821D1BDF4E001FE3D6 /* UIColor.swift */; };
+		F3E47C8D1D1BDF92001FE3D6 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C8C1D1BDF92001FE3D6 /* Math.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F3E47C391D1BD666001FE3D6 /* OpenWeatherCT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenWeatherCT.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3E47C3C1D1BD666001FE3D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F3E47C3E1D1BD666001FE3D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F3E47C411D1BD666001FE3D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F3E47C431D1BD666001FE3D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3E47C461D1BD666001FE3D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F3E47C481D1BD666001FE3D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3E47C511D1BD86C001FE3D6 /* Top.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Top.swift; sourceTree = "<group>"; };
+		F3E47C541D1BD87A001FE3D6 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F3E47C561D1BD900001FE3D6 /* TopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
+		F3E47C581D1BD96E001FE3D6 /* Views.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Views.swift; path = globals/Views.swift; sourceTree = "<group>"; };
+		F3E47C5B1D1BDA0A001FE3D6 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		F3E47C5D1D1BDA3B001FE3D6 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Colors.swift; path = globals/Colors.swift; sourceTree = "<group>"; };
+		F3E47C601D1BDA6D001FE3D6 /* SExp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SExp.h; sourceTree = "<group>"; };
+		F3E47C611D1BDA6D001FE3D6 /* SExp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SExp.m; sourceTree = "<group>"; };
+		F3E47C621D1BDA6D001FE3D6 /* SExpIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SExpIO.h; sourceTree = "<group>"; };
+		F3E47C631D1BDA6D001FE3D6 /* SExpIO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SExpIO.m; sourceTree = "<group>"; };
+		F3E47C641D1BDA6D001FE3D6 /* SExpTokenizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SExpTokenizer.h; sourceTree = "<group>"; };
+		F3E47C651D1BDA6D001FE3D6 /* SExpTokenizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SExpTokenizer.m; sourceTree = "<group>"; };
+		F3E47C661D1BDA6D001FE3D6 /* SExpValidityChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SExpValidityChecker.h; sourceTree = "<group>"; };
+		F3E47C671D1BDA6D001FE3D6 /* SExpValidityChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SExpValidityChecker.m; sourceTree = "<group>"; };
+		F3E47C681D1BDA6D001FE3D6 /* SimpleUnicharInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleUnicharInputStream.h; sourceTree = "<group>"; };
+		F3E47C691D1BDA6D001FE3D6 /* SimpleUnicharInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleUnicharInputStream.m; sourceTree = "<group>"; };
+		F3E47C6F1D1BDABE001FE3D6 /* OpenWeatherCT-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "OpenWeatherCT-Bridging-Header.h"; path = "OWSources/OpenWeatherCT-Bridging-Header.h"; sourceTree = "<group>"; };
+		F3E47C701D1BDAE2001FE3D6 /* ColorPalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
+		F3E47C721D1BDAFE001FE3D6 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
+		F3E47C731D1BDAFE001FE3D6 /* settings */ = {isa = PBXFileReference; lastKnownFileType = folder; path = settings; sourceTree = "<group>"; };
+		F3E47C771D1BDBFE001FE3D6 /* NSMutableArray+Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Stack.h"; sourceTree = "<group>"; };
+		F3E47C781D1BDBFE001FE3D6 /* NSMutableArray+Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Stack.m"; sourceTree = "<group>"; };
+		F3E47C7B1D1BDF4E001FE3D6 /* CGPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPoint.swift; sourceTree = "<group>"; };
+		F3E47C7C1D1BDF4E001FE3D6 /* CGRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRect.swift; sourceTree = "<group>"; };
+		F3E47C7D1D1BDF4E001FE3D6 /* Double.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		F3E47C7E1D1BDF4E001FE3D6 /* Int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
+		F3E47C7F1D1BDF4E001FE3D6 /* NSDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDate.swift; sourceTree = "<group>"; };
+		F3E47C801D1BDF4E001FE3D6 /* NSRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSRange.swift; sourceTree = "<group>"; };
+		F3E47C811D1BDF4E001FE3D6 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		F3E47C821D1BDF4E001FE3D6 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		F3E47C8C1D1BDF92001FE3D6 /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +103,90 @@
 		F3E47C3B1D1BD666001FE3D6 /* OpenWeatherCT */ = {
 			isa = PBXGroup;
 			children = (
-				F3E47C3C1D1BD666001FE3D6 /* AppDelegate.swift */,
-				F3E47C3E1D1BD666001FE3D6 /* ViewController.swift */,
-				F3E47C401D1BD666001FE3D6 /* Main.storyboard */,
+				F3E47C6F1D1BDABE001FE3D6 /* OpenWeatherCT-Bridging-Header.h */,
+				F3E47C501D1BD86C001FE3D6 /* jfb-libs */,
+				F3E47C531D1BD87A001FE3D6 /* OWSources */,
 				F3E47C431D1BD666001FE3D6 /* Assets.xcassets */,
 				F3E47C451D1BD666001FE3D6 /* LaunchScreen.storyboard */,
 				F3E47C481D1BD666001FE3D6 /* Info.plist */,
 			);
 			path = OpenWeatherCT;
+			sourceTree = "<group>";
+		};
+		F3E47C501D1BD86C001FE3D6 /* jfb-libs */ = {
+			isa = PBXGroup;
+			children = (
+				F3E47C761D1BDB04001FE3D6 /* bundle-resources */,
+				F3E47C7A1D1BDF27001FE3D6 /* objc */,
+				F3E47C511D1BD86C001FE3D6 /* Top.swift */,
+				F3E47C701D1BDAE2001FE3D6 /* ColorPalette.swift */,
+				F3E47C8C1D1BDF92001FE3D6 /* Math.swift */,
+				F3E47C8B1D1BDF5F001FE3D6 /* extensions */,
+			);
+			path = "jfb-libs";
+			sourceTree = "<group>";
+		};
+		F3E47C531D1BD87A001FE3D6 /* OWSources */ = {
+			isa = PBXGroup;
+			children = (
+				F3E47C561D1BD900001FE3D6 /* TopView.swift */,
+				F3E47C541D1BD87A001FE3D6 /* AppDelegate.swift */,
+				F3E47C5A1D1BD975001FE3D6 /* globals */,
+			);
+			path = OWSources;
+			sourceTree = "<group>";
+		};
+		F3E47C5A1D1BD975001FE3D6 /* globals */ = {
+			isa = PBXGroup;
+			children = (
+				F3E47C581D1BD96E001FE3D6 /* Views.swift */,
+				F3E47C5D1D1BDA3B001FE3D6 /* Colors.swift */,
+			);
+			name = globals;
+			sourceTree = "<group>";
+		};
+		F3E47C761D1BDB04001FE3D6 /* bundle-resources */ = {
+			isa = PBXGroup;
+			children = (
+				F3E47C721D1BDAFE001FE3D6 /* fonts */,
+				F3E47C731D1BDAFE001FE3D6 /* settings */,
+			);
+			name = "bundle-resources";
+			sourceTree = "<group>";
+		};
+		F3E47C7A1D1BDF27001FE3D6 /* objc */ = {
+			isa = PBXGroup;
+			children = (
+				F3E47C771D1BDBFE001FE3D6 /* NSMutableArray+Stack.h */,
+				F3E47C781D1BDBFE001FE3D6 /* NSMutableArray+Stack.m */,
+				F3E47C601D1BDA6D001FE3D6 /* SExp.h */,
+				F3E47C611D1BDA6D001FE3D6 /* SExp.m */,
+				F3E47C621D1BDA6D001FE3D6 /* SExpIO.h */,
+				F3E47C631D1BDA6D001FE3D6 /* SExpIO.m */,
+				F3E47C641D1BDA6D001FE3D6 /* SExpTokenizer.h */,
+				F3E47C651D1BDA6D001FE3D6 /* SExpTokenizer.m */,
+				F3E47C661D1BDA6D001FE3D6 /* SExpValidityChecker.h */,
+				F3E47C671D1BDA6D001FE3D6 /* SExpValidityChecker.m */,
+				F3E47C681D1BDA6D001FE3D6 /* SimpleUnicharInputStream.h */,
+				F3E47C691D1BDA6D001FE3D6 /* SimpleUnicharInputStream.m */,
+			);
+			name = objc;
+			sourceTree = "<group>";
+		};
+		F3E47C8B1D1BDF5F001FE3D6 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F3E47C7B1D1BDF4E001FE3D6 /* CGPoint.swift */,
+				F3E47C7C1D1BDF4E001FE3D6 /* CGRect.swift */,
+				F3E47C7D1D1BDF4E001FE3D6 /* Double.swift */,
+				F3E47C7E1D1BDF4E001FE3D6 /* Int.swift */,
+				F3E47C7F1D1BDF4E001FE3D6 /* NSDate.swift */,
+				F3E47C801D1BDF4E001FE3D6 /* NSRange.swift */,
+				F3E47C811D1BDF4E001FE3D6 /* String.swift */,
+				F3E47C821D1BDF4E001FE3D6 /* UIColor.swift */,
+				F3E47C5B1D1BDA0A001FE3D6 /* UIView.swift */,
+			);
+			name = extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,9 +247,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3E47C741D1BDAFE001FE3D6 /* fonts in Resources */,
+				F3E47C751D1BDAFE001FE3D6 /* settings in Resources */,
 				F3E47C471D1BD666001FE3D6 /* LaunchScreen.storyboard in Resources */,
 				F3E47C441D1BD666001FE3D6 /* Assets.xcassets in Resources */,
-				F3E47C421D1BD666001FE3D6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,22 +261,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3E47C3F1D1BD666001FE3D6 /* ViewController.swift in Sources */,
-				F3E47C3D1D1BD666001FE3D6 /* AppDelegate.swift in Sources */,
+				F3E47C5C1D1BDA0A001FE3D6 /* UIView.swift in Sources */,
+				F3E47C8A1D1BDF4E001FE3D6 /* UIColor.swift in Sources */,
+				F3E47C6D1D1BDA6D001FE3D6 /* SExpValidityChecker.m in Sources */,
+				F3E47C891D1BDF4E001FE3D6 /* String.swift in Sources */,
+				F3E47C851D1BDF4E001FE3D6 /* Double.swift in Sources */,
+				F3E47C791D1BDBFE001FE3D6 /* NSMutableArray+Stack.m in Sources */,
+				F3E47C871D1BDF4E001FE3D6 /* NSDate.swift in Sources */,
+				F3E47C5E1D1BDA3B001FE3D6 /* Colors.swift in Sources */,
+				F3E47C591D1BD96E001FE3D6 /* Views.swift in Sources */,
+				F3E47C861D1BDF4E001FE3D6 /* Int.swift in Sources */,
+				F3E47C6B1D1BDA6D001FE3D6 /* SExpIO.m in Sources */,
+				F3E47C881D1BDF4E001FE3D6 /* NSRange.swift in Sources */,
+				F3E47C6A1D1BDA6D001FE3D6 /* SExp.m in Sources */,
+				F3E47C8D1D1BDF92001FE3D6 /* Math.swift in Sources */,
+				F3E47C841D1BDF4E001FE3D6 /* CGRect.swift in Sources */,
+				F3E47C571D1BD900001FE3D6 /* TopView.swift in Sources */,
+				F3E47C6E1D1BDA6D001FE3D6 /* SimpleUnicharInputStream.m in Sources */,
+				F3E47C551D1BD87A001FE3D6 /* AppDelegate.swift in Sources */,
+				F3E47C831D1BDF4E001FE3D6 /* CGPoint.swift in Sources */,
+				F3E47C521D1BD86C001FE3D6 /* Top.swift in Sources */,
+				F3E47C6C1D1BDA6D001FE3D6 /* SExpTokenizer.m in Sources */,
+				F3E47C711D1BDAE2001FE3D6 /* ColorPalette.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F3E47C401D1BD666001FE3D6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F3E47C411D1BD666001FE3D6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F3E47C451D1BD666001FE3D6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -249,10 +387,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = OpenWeatherCT/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.cantabilabs.OpenWeatherCT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OpenWeatherCT/OWSources/OpenWeatherCT-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -260,10 +401,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = OpenWeatherCT/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.cantabilabs.OpenWeatherCT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OpenWeatherCT/OWSources/OpenWeatherCT-Bridging-Header.h";
 			};
 			name = Release;
 		};
