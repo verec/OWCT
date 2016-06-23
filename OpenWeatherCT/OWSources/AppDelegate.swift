@@ -25,6 +25,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             Top.mainView = TopView()
         }
         self.window?.backgroundColor = UIColor.whiteColor()
+
+        /////// tests
+//        WellKnown.Network.weatherAPI.load() {
+//            (error, data) in
+//
+//            if let data = data {
+//                /// doo-da JSON parsing
+//                print(data)
+//            } else if let error = error {
+//                /// doo-da error handling
+//                print(error)
+//            }
+//        }
+
+        let configuration = Loader.Configuration.create(city: "London", country: "uk", recordCount: 5)
+        WellKnown.Network.loader.load(configuration) {
+            (records: [WeatherRecord]?) in
+
+            /// on main thread
+
+        }
 //        WellKnown.wireboard.rewire()
 
         return true
