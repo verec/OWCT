@@ -8,7 +8,7 @@ You will need Xcode 7.3.1 and Swift 2.2 _this has *not* been ported to Swift 3_
 
 ## Libraries
 
-I used a lot of my own libraries for the UI side, though the no external dependency at all, no CocoaPods no Carthage, etc ...
+I used a lot of my own libraries for the UI side, though no external dependency at all, no CocoaPods no Carthage, etc ...
 
 ## Design
 
