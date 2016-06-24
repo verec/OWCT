@@ -28,6 +28,7 @@ struct Network {
 
  */
 
+        static let iconEndPoint =   "http://openweathermap.org/img/w/"
         static let baseEndPoint =   "http://api.openweathermap.org/data/2.5/forecast"
         static let apiKey       =   "965c55c4f42900256742bc60d5dd1d89"
 
@@ -36,6 +37,7 @@ struct Network {
             let baseDict:[String:String] = [
                 "mode":     "json"
             ,   "appid":    apiKey
+            ,   "units":    "metric"
             ]
 
             var configured = baseEndPoint
@@ -58,7 +60,7 @@ struct Network {
     typealias MainThreadConmpletiuon = (NSError?, NSData?)->()
 
     func load(
-        query:          [String:String]
+        fullURL:        NSURL?
     ,   uiCallWhenDone: MainThreadConmpletiuon) {
 
         func callCompletion(error:NSError?, data: NSData?) {
@@ -67,10 +69,10 @@ struct Network {
             }
         }
 
-        /// off load the newtowrk request off the main thread
+        /// offload the newtowrk request off the main thread
         GCD.SerialQueue1.async {
 
-            if let url = NSURL(string:Configuration.configuredEndPoint(query)) {
+            if let url = fullURL {
 
                 let request = NSURLRequest(URL: url)
 
@@ -88,11 +90,26 @@ struct Network {
 
                     callCompletion(error, data: data)
                 }
-                
+
                 task.resume()
             } else {
                 callCompletion(NSError(domain: "invalid url endpoint", code: -1, userInfo: nil), data: nil)
             }
         }
+    }
+    
+
+    func load(
+        query:          [String:String]
+    ,   uiCallWhenDone: MainThreadConmpletiuon) {
+
+        load(NSURL(string: Configuration.configuredEndPoint(query)), uiCallWhenDone: uiCallWhenDone)
+    }
+    
+    func load(
+        icon:           String
+    ,   uiCallWhenDone: MainThreadConmpletiuon) {
+
+        load(NSURL(string: Configuration.iconEndPoint + icon + ".png"), uiCallWhenDone: uiCallWhenDone)
     }
 }

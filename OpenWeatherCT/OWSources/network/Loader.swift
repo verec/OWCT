@@ -7,68 +7,24 @@
 //
 
 import Foundation
+import UIKit
 
 struct Loader {
 
-    struct Configuration : CustomDebugStringConvertible {
-        let city:           String?
-        let country:        String?
-        let cityCode:       String?
-        let latitude:       Double?
-        let longitude:      Double?
-        let lineCount:      Int?
+    var iconCache = [String:UIImage]()
 
-        var debugDescription: String {
-            /// work around "expression too complex ...
-            let ci = "(city ?? \"<?city>\")"
-            let co = "(country ?? \"<?country>\")"
-            let cd = "(cityCode ?? \"<?cityCode>\")"
-            let la = "(latitude ?? \"<?latitude>\")"
-            let lo = "(longitude ?? \"<?longitude>\")"
-            let lc = "(lineCount ?? \"<?lineCount>\")"
-
-            return "\(ci), \(co), \(cd), \(la), \(lo), \(lc)"
-        }
-
-        init(
-            city:           String? = .None
-        ,   country:        String? = .None
-        ,   cityCode:       String? = .None
-        ,   latitude:       Double? = .None
-        ,   longitude:      Double? = .None
-        ,   lineCount:      Int?    = .None
-            ) {
-
-            self.city = city
-            self.country = country
-            self.cityCode = cityCode
-            self.latitude = latitude
-            self.longitude = longitude
-            self.lineCount = lineCount
-        }
-
-        static func create(latitude latitude: Double, longitude:Double, recordCount:Int = 5) -> Configuration {
-            return Configuration(latitude: latitude, longitude: longitude, lineCount: recordCount)
-        }
-
-        static func create(city city: String, country:String, recordCount:Int = 5) -> Configuration {
-            return Configuration(city: city, country: country, lineCount: recordCount)
-        }
-
-        static func create(cityCode: String, recordCount:Int = 5) -> Configuration {
-            return Configuration(cityCode: cityCode, lineCount: recordCount)
-        }
-    }
-
-    typealias MainThreadCompletion = ([WeatherRecord]?)->()
+    typealias MainThreadCompletion = (WeatherForecast?)->()
+    typealias MainThreadImageCompletion = (UIImage?)->()
 
     func load(configuration: Configuration, uiCompletion:MainThreadCompletion) {
 
+        assert(NSThread.isMainThread())
+
         /// first part is "faat enought" to perform on the calling thread
 
-        func callCompletion(records: [WeatherRecord]? = .None) {
+        func callCompletion(forecast: WeatherForecast? = .None) {
             GCD.MainQueue.async {
-                uiCompletion(records)
+                uiCompletion(forecast)
             }
         }
         /// infer the query mode from the configuration
@@ -108,17 +64,56 @@ struct Loader {
             (error, data) in
 
             /// we're back on the main thread here.
+            assert(NSThread.isMainThread())
 
             if let data = data {
                 /// JSON decoding is fast enough
                 do {
+//                    print("data: \(data)")
                     if let result = try NSJSONSerialization.JSONObjectWithData(data, options: [.MutableContainers, .AllowFragments]) as? [String:AnyObject] {
-                        let records = WeatherRecord.decode(result)
-                        callCompletion(records)
+                        let forecast = WeatherForecast.decode(result)
+                        callCompletion(forecast)
                     }
                 } catch {
                     print(error)
                     callCompletion()
+                }
+
+            } else if let error = error {
+                print(error)
+                callCompletion()
+            }
+        }
+    }
+
+    mutating func load(icon: String, uiCompletion:MainThreadImageCompletion) {
+
+        func callCompletion(records: UIImage? = .None) {
+            GCD.MainQueue.async {
+                uiCompletion(records)
+            }
+        }
+
+        assert(NSThread.isMainThread())
+
+        if let image = self.iconCache[icon] {
+            callCompletion(image)
+            return
+        }
+
+        /// the network call happens on serail queue #1
+        WellKnown.Network.weatherAPI.load(icon) {
+            (error, data) in
+
+            /// we're back on the main thread here.
+            assert(NSThread.isMainThread())
+
+            if let data = data {
+                /// we use UIKit here so try and be safe: use the main thread
+                /// for image creation
+                if let image = UIImage(data: data) {
+                    self.iconCache[icon] = image
+                    callCompletion(image)
                 }
 
             } else if let error = error {

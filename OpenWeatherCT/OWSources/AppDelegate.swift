@@ -13,7 +13,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
         self.window = Top.mainWindow {
@@ -24,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             Top.defaultController.statusBarStyle = .Default
             Top.mainView = TopView()
         }
+
         self.window?.backgroundColor = UIColor.whiteColor()
 
         /////// tests
@@ -39,10 +39,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            }
 //        }
 
-        let configuration = Loader.Configuration.create(city: "London", country: "uk", recordCount: 5)
+//        let configuration = Configuration.create(city: "London", country: "uk", recordCount: 5)
+        let configuration = Configuration.create(city: "London", country: "uk")
         WellKnown.Network.loader.load(configuration) {
-            (records: [WeatherRecord]?) in
+            (forecast: WeatherForecast?) in
 
+            WellKnown.Model.currentForecast = forecast
             /// on main thread
 
         }

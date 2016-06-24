@@ -13,6 +13,6 @@ struct  Views {
 
     struct Main {
 
-        static let fiveDaysForecastView =   UIView()
+        static let forecastView =   OpenWeatherCT.ForecastView()
     }
 }

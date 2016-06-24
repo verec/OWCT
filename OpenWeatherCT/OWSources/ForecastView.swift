@@ -1,5 +1,5 @@
 //
-//  FiveDaysForecastView.swift
+//  ForecastView.swift
 //  OpenWeatherCT
 //
 //  Created by verec on 23/06/2016.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-class FiveDaysForecastView: UIView {
+class ForecastView: UIView {
 
 }

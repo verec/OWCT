@@ -30,11 +30,11 @@ extension TopView {
     override func layoutSubviews() {
         super.layoutSubviews()
 
-        if Views.Main.fiveDaysForecastView.orphaned {
-            self.addSubview(Views.Main.fiveDaysForecastView)
+        if Views.Main.forecastView.orphaned {
+            self.addSubview(Views.Main.forecastView)
             self.backgroundColor = Colors.Main.topViewBackgroundColor
         }
 
-        Views.Main.fiveDaysForecastView.frame = self.bounds
+        Views.Main.forecastView.frame = self.bounds
     }
 }

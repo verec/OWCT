@@ -14,4 +14,10 @@ struct WellKnown {
         static let weatherAPI   = OpenWeatherCT.Network()
         static let loader       = OpenWeatherCT.Loader()
     }
+
+    struct Model {
+        /// a value type, non mutable even though `currentForecast` can be
+        /// made to refer to another "newer" immutable value type
+        static var currentForecast: OpenWeatherCT.WeatherForecast? = .None
+    }
 }
