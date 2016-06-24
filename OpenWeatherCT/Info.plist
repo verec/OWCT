@@ -96,5 +96,7 @@
 		<string>fonts/Concourse/Concourse T8 Tab Italic.ttf</string>
 		<string>fonts/Concourse/Concourse T8 Tab Regular.ttf</string>
 	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<true/>
 </dict>
 </plist>

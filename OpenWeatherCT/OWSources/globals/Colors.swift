@@ -23,6 +23,8 @@ struct Colors {
 
     struct Main {
         static let topViewBackgroundColor   =   Primitives.cerulean
+
+        static let foreTextColor            =   Primitives.white
     }
 
     static let themeColor                   =   Primitives.cerulean

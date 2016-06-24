@@ -20,4 +20,8 @@ struct WellKnown {
         /// made to refer to another "newer" immutable value type
         static var currentForecast: OpenWeatherCT.WeatherForecast? = .None
     }
+
+    struct Controllers {
+        static let forecastLoader = OpenWeatherCT.ForecastLoader()
+    }
 }

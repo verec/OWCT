@@ -20,34 +20,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 .Portrait,.PortraitUpsideDown
             ]
 
-            Top.defaultController.statusBarStyle = .Default
+            Top.defaultController.statusBarStyle = .LightContent
             Top.mainView = TopView()
         }
-
         self.window?.backgroundColor = UIColor.whiteColor()
 
-        /////// tests
-//        WellKnown.Network.weatherAPI.load() {
-//            (error, data) in
-//
-//            if let data = data {
-//                /// doo-da JSON parsing
-//                print(data)
-//            } else if let error = error {
-//                /// doo-da error handling
-//                print(error)
-//            }
-//        }
-
-//        let configuration = Configuration.create(city: "London", country: "uk", recordCount: 5)
-        let configuration = Configuration.create(city: "London", country: "uk")
-        WellKnown.Network.loader.load(configuration) {
-            (forecast: WeatherForecast?) in
-
-            WellKnown.Model.currentForecast = forecast
-            /// on main thread
-
+        if let parisCode = Presets.presets[Presets.paris.name] {
+            WellKnown.Controllers.forecastLoader.load(parisCode)
         }
+
+
+//        let configuration = Configuration.create(city: "London", country: "uk")
+//        WellKnown.Network.loader.load(configuration) {
+//            (forecast: WeatherForecast?) in
+//
+//            WellKnown.Model.currentForecast = forecast
+//        }
 //        WellKnown.wireboard.rewire()
 
         return true

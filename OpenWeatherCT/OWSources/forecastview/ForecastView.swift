@@ -1,0 +1,137 @@
+//
+//  ForecastView.swift
+//  OpenWeatherCT
+//
+//  Created by verec on 23/06/2016.
+//  Copyright © 2016 Cantabilabs Ltd. All rights reserved.
+//
+
+import Foundation
+import UIKit
+
+class ForecastView: UIView {
+
+    private struct Parameters {
+        static let cellClass                = ForecastCell.self
+        static let cellIdentifier           = NSStringFromClass(cellClass)
+    }
+
+    let citySelector    = UISegmentedControl(
+                            items: Presets.presets
+                                .keys.map { $0 as String }.sort())
+    let tableView       = UITableView(frame: CGRect.zero, style: .Plain)
+
+}
+
+extension ForecastView {
+
+    func citySelectorChanged(_:UISegmentedControl) {
+        let index = citySelector.selectedSegmentIndex
+        let name = Presets.presets.keys.map { $0 as String }.sort()[index]
+        if let code = Presets.presets[name] {
+            WellKnown.Controllers.forecastLoader.load(code)
+        }
+    }
+
+    func lazySetup() {
+        self.addSubview(citySelector)
+        citySelector.tintColor = Colors.Main.foreTextColor
+        citySelector.addTarget(
+            self
+        ,   action:             #selector(ForecastView.citySelectorChanged(_:))
+        ,   forControlEvents:   [.ValueChanged])
+
+        citySelector.selectedSegmentIndex = 1 /// Paris
+
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        self.tableView.registerClass(Parameters.cellClass, forCellReuseIdentifier: Parameters.cellIdentifier)
+
+        self.tableView.showsHorizontalScrollIndicator = true
+        self.tableView.showsVerticalScrollIndicator = false
+        self.tableView.separatorStyle = .None
+        self.backgroundColor = UIColor.clearColor()
+
+        self.tableView.backgroundColor = UIColor.clearColor()
+    }
+}
+
+extension ForecastView {
+
+    override func layoutSubviews() {
+        if citySelector.orphaned {
+            lazySetup()
+        }
+
+        let top = self.bounds.top(Sizes.CitySelector.height)
+//        let mid = self.bounds.shrink(.Top, by: Sizes.CitySelector.height)
+//                            .shrink(.Bottom, by: Sizes.Guides.bottomGuide)
+
+        citySelector.sizeToFit()
+        citySelector.frame = citySelector.bounds.centered(intoRect: top)
+    }
+
+}
+
+extension ForecastView {
+
+    func reload() {
+    }
+
+}
+
+extension ForecastView {
+
+    func bind(record: WeatherRecord?, cell: ForecastCell) {
+        cell.view.weatherRecord = record
+    }
+}
+
+extension ForecastView : UITableViewDataSource {
+
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if let forecast = WellKnown.Model.currentForecast, let records = forecast.records {
+            return records.count
+        }
+        return 0
+    }
+
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+
+        guard let cell = tableView.dequeueReusableCellWithIdentifier(Parameters.cellIdentifier) as? ForecastCell else {
+            assert(false, "This just cannot happen")
+            return UITableViewCell()
+        }
+        if let forecast = WellKnown.Model.currentForecast, let records = forecast.records {
+            let record = records[indexPath.row]
+            bind(record, cell: cell)
+        } else {
+            assert(false)
+            return UITableViewCell()
+        }
+
+        return cell
+    }
+}
+
+extension ForecastView : UITableViewDelegate {
+
+    /// technically a UITableViewDelegate _is a_ UIScrollViewDelegate, but it
+    /// clearer to separate what belongs to the scrolView from what belongs
+    /// to the tableView.
+
+    func fixedRowHeight() -> CGFloat {
+//        if let resturantTable = restaurantTable {
+//            return resturantTable.bounds.height / CGFloat(maxRows)
+//        }
+        return 66.0
+    }
+
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return fixedRowHeight()
+    }
+}

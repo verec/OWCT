@@ -69,7 +69,6 @@ struct Loader {
             if let data = data {
                 /// JSON decoding is fast enough
                 do {
-//                    print("data: \(data)")
                     if let result = try NSJSONSerialization.JSONObjectWithData(data, options: [.MutableContainers, .AllowFragments]) as? [String:AnyObject] {
                         let forecast = WeatherForecast.decode(result)
                         callCompletion(forecast)
