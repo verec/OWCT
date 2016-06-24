@@ -72,14 +72,6 @@ struct Fonts {
 
     struct Main {
         static let tempCellFont         =   Fonts.Concourse.T3.boldItalic14
-//        static let foodCellFont         =   Fonts.Concourse.T3.boldItalic12
-//        static let nratCellFont         =   Fonts.Concourse.T3.bold10
-//        static let addrCellFont         =   Fonts.Concourse.T3.italic10
-//
-//        static let nearViewFont         =   Fonts.Concourse.T3.regular20
-//        static let findViewFont         =   Fonts.Concourse.T3.regular20
-//        static let wherViewFont         =   Fonts.Concourse.T3.regular20
-
     }
 }
 

@@ -25,6 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         self.window?.backgroundColor = UIColor.whiteColor()
 
+        /// this primes the app with Paris. Normally I'd read the userdefaults
+        /// and restore last user choice instead.
         if let parisCode = Presets.presets[Presets.paris.name] {
             WellKnown.Controllers.forecastLoader.load(parisCode)
         }
