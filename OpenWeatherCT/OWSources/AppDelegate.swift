@@ -13,7 +13,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
         self.window = Top.mainWindow {
@@ -21,32 +20,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 .Portrait,.PortraitUpsideDown
             ]
 
-            Top.defaultController.statusBarStyle = .Default
+            Top.defaultController.statusBarStyle = .LightContent
             Top.mainView = TopView()
         }
         self.window?.backgroundColor = UIColor.whiteColor()
 
-        /////// tests
-//        WellKnown.Network.weatherAPI.load() {
-//            (error, data) in
-//
-//            if let data = data {
-//                /// doo-da JSON parsing
-//                print(data)
-//            } else if let error = error {
-//                /// doo-da error handling
-//                print(error)
-//            }
-//        }
-
-        let configuration = Loader.Configuration.create(city: "London", country: "uk", recordCount: 5)
-        WellKnown.Network.loader.load(configuration) {
-            (records: [WeatherRecord]?) in
-
-            /// on main thread
-
+        /// this primes the app with Paris. Normally I'd read the userdefaults
+        /// and restore last user choice instead.
+        if let parisCode = Presets.presets[Presets.paris.name] {
+            WellKnown.Controllers.forecastLoader.load(parisCode)
         }
-//        WellKnown.wireboard.rewire()
 
         return true
     }
