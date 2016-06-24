@@ -29,7 +29,7 @@ extension ForecastCell {
 
     override func prepareForReuse() {
         super.prepareForReuse()
-        view.logo.image = nil
+        view.weatherIcon.image = nil
     }
 }
 

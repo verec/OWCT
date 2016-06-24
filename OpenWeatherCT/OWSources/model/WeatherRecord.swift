@@ -208,6 +208,11 @@ import Foundation
 
 struct WeatherForecast {
 
+    static let dateFormatter:NSDateFormatter = {
+        $0.dateFormat = "yyyy-MM-dd HH:mm:SS"
+        return $0
+    }(NSDateFormatter())
+
     let latitude:       String?
     let longitude:      String?
     let cityCode:       String?
@@ -281,13 +286,36 @@ struct WeatherForecast {
             print("unhandled key \(key), value is \(value)")
         }
 
+        let sortedRecord = records.sort {
+            let r0 = $0
+            let r1 = $1
+
+            guard let d0 = r0.date else {
+                return false
+            }
+
+            guard let d1 = r1.date else {
+                return false
+            }
+
+            guard let t0 = self.dateFormatter.dateFromString(d0) else {
+                return false
+            }
+
+            guard let t1 = self.dateFormatter.dateFromString(d1) else {
+                return false
+            }
+
+            return t0.timeIntervalSince1970 <= t1.timeIntervalSince1970
+        }
+
         return WeatherForecast(
             latitude:       latitude
         ,   longitude:      longitude
         ,   cityCode:       cityCode
         ,   cityName:       cityName
         ,   countryCode:    countryCode
-        ,   records:        records)
+        ,   records:        sortedRecord)
     }
 }
 

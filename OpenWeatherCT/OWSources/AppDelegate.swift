@@ -29,15 +29,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             WellKnown.Controllers.forecastLoader.load(parisCode)
         }
 
-
-//        let configuration = Configuration.create(city: "London", country: "uk")
-//        WellKnown.Network.loader.load(configuration) {
-//            (forecast: WeatherForecast?) in
-//
-//            WellKnown.Model.currentForecast = forecast
-//        }
-//        WellKnown.wireboard.rewire()
-
         return true
     }
 

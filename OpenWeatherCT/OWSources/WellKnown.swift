@@ -12,7 +12,7 @@ struct WellKnown {
 
     struct Network {
         static let weatherAPI   = OpenWeatherCT.Network()
-        static let loader       = OpenWeatherCT.Loader()
+        static var loader       = OpenWeatherCT.Loader()
     }
 
     struct Model {

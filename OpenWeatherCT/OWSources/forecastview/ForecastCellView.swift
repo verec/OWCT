@@ -15,8 +15,8 @@ class ForecastCellView: UIView {
 
     var refresher:((Int)->())?
 
-    let logo    =   UIImageView()
-//    let plch    =   UIActivityIndicatorView(activityIndicatorStyle: .Gray)
+    let weatherIcon    =   UIImageView()
+    let plch    =   UIActivityIndicatorView(activityIndicatorStyle: .Gray)
 //    let name    =   UILabel()
 //    let food    =   UILabel()
 //    let nrat    =   UILabel()
@@ -58,8 +58,8 @@ class ForecastCellView: UIView {
 extension ForecastCellView {
 
     func setup() {
-        self.addSubview(logo)
-//        self.addSubview(plch)
+        self.addSubview(weatherIcon)
+        self.addSubview(plch)
 //        self.addSubview(name)
 //        self.addSubview(addr)
 //        self.addSubview(food)
@@ -102,6 +102,21 @@ extension ForecastCellView {
         guard let weatherRecord = self.weatherRecord else {
             return
         }
+
+        /// do we have an icon to show?
+        if let icon = weatherRecord.weather_icon {
+            if let _ = self.weatherIcon.image {
+                /// we're golden
+            } else {
+                WellKnown.Network.loader.load(icon) {
+                    if let image = $0 {
+                        self.weatherIcon.image = image
+                        self.setNeedsLayout()
+                        self.setNeedsDisplay()
+                    }
+                }
+            }
+        }
 //        name.text = restaurant.name
 //        addr.text = restaurant.postcode + " " + restaurant.address
 //
@@ -119,7 +134,7 @@ extension ForecastCellView {
 //
 //        /// do we have the asset in the cache?
 //        if let image = Model.restaurantList.metaData[restaurant.id]?.image {
-//            logo.image = image
+//            weatherIcon.image = image
 //        } else {
 //            /// go fetch it
 //            if let logoURL = restaurant.logoURL {
@@ -135,7 +150,7 @@ extension ForecastCellView {
 //            }
 //        }
 //
-//        logo.bounds = CGRect.zero.square(50.0)
+//        weatherIcon.bounds = CGRect.zero.square(50.0)
 
         self.setNeedsLayout()
         self.setNeedsDisplay()
@@ -151,22 +166,22 @@ extension ForecastCellView {
             return
         }
 //
-//        let logoView:UIView
-//        if let _ = logo.image {
-//            plch.stopAnimating()
-//            plch.hidden = true
-//            logo.hidden = false
-//            logoView = logo
-//        } else {
-//            plch.hidden = false
-//            logo.hidden = true
-//            plch.startAnimating()
-//            logoView = plch
-//        }
-//
-//        logoView.frame = CGRect.zero.square(50).centered(intoRect: self.bounds)
-//            .edge(.Left, alignedToRect: self.bounds)
-//            .edge(.Left, offsetBy: -10.0)
+        let logoView:UIView
+        if let _ = weatherIcon.image {
+            plch.stopAnimating()
+            plch.hidden = true
+            weatherIcon.hidden = false
+            logoView = weatherIcon
+        } else {
+            plch.hidden = false
+            weatherIcon.hidden = true
+            plch.startAnimating()
+            logoView = plch
+        }
+
+        logoView.frame = CGRect.zero.square(50).centered(intoRect: self.bounds)
+            .edge(.Left, alignedToRect: self.bounds)
+            .edge(.Left, offsetBy: -10.0)
 //
 //        name.sizeToFit()
 //        addr.sizeToFit()

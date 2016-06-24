@@ -43,6 +43,7 @@ extension ForecastView {
 
         citySelector.selectedSegmentIndex = 1 /// Paris
 
+        self.addSubview(tableView)
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.registerClass(Parameters.cellClass, forCellReuseIdentifier: Parameters.cellIdentifier)
@@ -59,24 +60,38 @@ extension ForecastView {
 extension ForecastView {
 
     override func layoutSubviews() {
+
+        super.layoutSubviews()
+
+        if !self.bounds.isDefined {
+            return
+        }
+
         if citySelector.orphaned {
             lazySetup()
         }
 
         let top = self.bounds.top(Sizes.CitySelector.height)
-//        let mid = self.bounds.shrink(.Top, by: Sizes.CitySelector.height)
-//                            .shrink(.Bottom, by: Sizes.Guides.bottomGuide)
+        let mid = self.bounds.shrink(.Top, by: Sizes.CitySelector.height)
+                            .shrink(.Bottom, by: Sizes.Guides.bottomGuide)
+                            .insetBy(dx:30.0, dy: 0.0)
 
         citySelector.sizeToFit()
         citySelector.frame = citySelector.bounds.centered(intoRect: top)
+        tableView.frame = mid
     }
-
 }
 
 extension ForecastView {
 
     func reload() {
+        reloadContents()
     }
+
+    func reloadContents() {
+        self.tableView.reloadSections(NSIndexSet(index:0), withRowAnimation: .Automatic)
+    }
+
 
 }
 
