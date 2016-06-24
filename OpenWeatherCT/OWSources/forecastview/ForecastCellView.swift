@@ -13,15 +13,13 @@ import QuartzCore
 
 class ForecastCellView: UIView {
 
-    var refresher:((Int)->())?
+    static let calendar = NSCalendar.autoupdatingCurrentCalendar
 
     let weatherIcon    =   UIImageView()
     let plch    =   UIActivityIndicatorView(activityIndicatorStyle: .Gray)
-//    let name    =   UILabel()
-//    let food    =   UILabel()
-//    let nrat    =   UILabel()
-//    let addr    =   UILabel()
-//    let rtng    =   FingerSlider()
+    let temp    =   UILabel()
+    let wind    =   UILabel()
+    let time    =   UILabel()
 
     var weatherRecord: WeatherRecord? {
         didSet {
@@ -60,31 +58,13 @@ extension ForecastCellView {
     func setup() {
         self.addSubview(weatherIcon)
         self.addSubview(plch)
-//        self.addSubview(name)
-//        self.addSubview(addr)
-//        self.addSubview(food)
-//        self.addSubview(nrat)
-//        self.addSubview(rtng)
-//
-//        rtng.trackColor = Colors.themeColor.colorWithAlphaComponent(0.2)
-//        rtng.thumbColor = Colors.themeColor2.colorWithAlphaComponent(0.8)
-//        rtng.gaugeOnly = true
-//
-//        setupLabel(name)
-//        name.textColor = Colors.MainPage.restaurantNameColor
-//        name.font = Fonts.MainPage.nameCellFont
-//
-//        setupLabel(food)
-//        food.textColor = Colors.MainPage.restaurantFoodColor
-//        food.font = Fonts.MainPage.foodCellFont
-//
-//        setupLabel(nrat)
-//        nrat.textColor = Colors.MainPage.restaurantNratColor
-//        nrat.font = Fonts.MainPage.nratCellFont
-//
-//        setupLabel(addr)
-//        addr.textColor = Colors.MainPage.restaurantAddrColor
-//        addr.font = Fonts.MainPage.addrCellFont
+        self.addSubview(temp)
+        self.addSubview(wind)
+        self.addSubview(time)
+
+        setupLabel(temp)
+        setupLabel(wind)
+        setupLabel(time)
     }
 
     func setupLabel(label: UILabel, text: String? = .None) {
@@ -93,6 +73,9 @@ extension ForecastCellView {
         }
         label.backgroundColor = UIColor.clearColor()
         label.textAlignment = .Left
+
+        label.textColor = Colors.Main.foreTextColor
+        label.font = Fonts.Main.tempCellFont
     }
 }
 
@@ -117,40 +100,27 @@ extension ForecastCellView {
                 }
             }
         }
-//        name.text = restaurant.name
-//        addr.text = restaurant.postcode + " " + restaurant.address
-//
-//        var text = ""
-//        for f in restaurant.food {
-//            if text.characters.count > 0 {
-//                text += ", "
-//            }
-//            text += f
-//        }
-//        food.text = text
-//
-//        let ratingRange = Model.restaurantList.maxRating - Model.restaurantList.minRating
-//        rtng.unitValue = (restaurant.rating - Model.restaurantList.minRating) / ratingRange
-//
-//        /// do we have the asset in the cache?
-//        if let image = Model.restaurantList.metaData[restaurant.id]?.image {
-//            weatherIcon.image = image
-//        } else {
-//            /// go fetch it
-//            if let logoURL = restaurant.logoURL {
-//                WellKnown.loader.loadImage(logoURL) {
-//                    let data = $0
-//                    if let data = data {
-//                        if let image = UIImage(data: data) {
-//                            Model.restaurantList.metaData[restaurant.id]?.image = image
-//                            self.refresher?(restaurant.id)
-//                        }
-//                    }
-//                }
-//            }
-//        }
-//
-//        weatherIcon.bounds = CGRect.zero.square(50.0)
+        if let celsius = weatherRecord.temp {
+            let intTemp = Int(celsius.NS.doubleValue)
+            temp.text = "\(intTemp) C"
+        }
+
+        if let speed = weatherRecord.wind_speed {
+            wind.text = "\(speed) m/s"
+        }
+
+        if let date = weatherRecord.date {
+            if let d = WeatherForecast.dateFormatter.dateFromString(date) {
+                let hour = d.hour
+                let dow = d.weekday
+                let symbs = WeatherForecast.dateFormatter.weekdaySymbols
+
+                if dow < symbs.count {
+                    let text = "\(symbs[dow]) \(hour):00"
+                    time.text = text
+                }
+            }
+        }
 
         self.setNeedsLayout()
         self.setNeedsDisplay()
@@ -165,7 +135,7 @@ extension ForecastCellView {
         if !self.bounds.isDefined {
             return
         }
-//
+
         let logoView:UIView
         if let _ = weatherIcon.image {
             plch.stopAnimating()
@@ -182,29 +152,21 @@ extension ForecastCellView {
         logoView.frame = CGRect.zero.square(50).centered(intoRect: self.bounds)
             .edge(.Left, alignedToRect: self.bounds)
             .edge(.Left, offsetBy: -10.0)
-//
-//        name.sizeToFit()
-//        addr.sizeToFit()
-//        food.sizeToFit()
-//        nrat.sizeToFit()
-//
-//        let columns = self.bounds.tabStops([0.30, 0.70])
-//
-//        addr.bounds.size.width = (columns[1].origin.x - columns[0].origin.x) - 10.0
-//
-//        name.frame = name.bounds.positionned(intoRect: self.bounds, widthUnitRange: 0.5, heightUnitRange: 0.25)
-//            .edge(.Left, alignedToRect: columns[0])
-//        addr.frame = addr.bounds.positionned(intoRect: self.bounds, widthUnitRange: 0.5, heightUnitRange: 0.25 + 0.20)
-//            .edge(.Left, alignedToRect: columns[0])
-//        food.frame = food.bounds.positionned(intoRect: self.bounds, widthUnitRange: 0.5, heightUnitRange: 0.62)
-//            .edge(.Left, alignedToRect: columns[0])
-//
-//        let rect = CGRect.zero.square(50.0).withHeight(5.0)
-//        rtng.frame = rect.centered(intoRect: self.bounds)
-//            .edge(.Right, alignedToRect: self.bounds)
-//            .edge(.Right, offsetBy: -10.0)
-//        
 
+        temp.sizeToFit()
+        wind.sizeToFit()
+        time.sizeToFit()
+
+        let columns = self.bounds.tabStops([0.30, 0.70])
+
+        temp.frame = temp.bounds.positionned(intoRect: self.bounds, widthUnitRange: 0.5, heightUnitRange: 0.25)
+            .edge(.Left, alignedToRect: columns[0])
+
+        wind.frame = wind.bounds.positionned(intoRect: self.bounds, widthUnitRange: 0.5, heightUnitRange: 0.50)
+            .edge(.Left, alignedToRect: columns[0])
+
+        time.frame = time.bounds.positionned(intoRect: self.bounds, widthUnitRange: 0.5, heightUnitRange: 0.75)
+            .edge(.Left, alignedToRect: columns[0])
     }
 }
 

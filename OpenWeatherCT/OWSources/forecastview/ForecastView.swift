@@ -14,6 +14,8 @@ class ForecastView: UIView {
     private struct Parameters {
         static let cellClass                = ForecastCell.self
         static let cellIdentifier           = NSStringFromClass(cellClass)
+
+        static let maxRows:CGFloat          = 7.0
     }
 
     let citySelector    = UISegmentedControl(
@@ -91,8 +93,6 @@ extension ForecastView {
     func reloadContents() {
         self.tableView.reloadSections(NSIndexSet(index:0), withRowAnimation: .Automatic)
     }
-
-
 }
 
 extension ForecastView {
@@ -140,13 +140,31 @@ extension ForecastView : UITableViewDelegate {
     /// to the tableView.
 
     func fixedRowHeight() -> CGFloat {
-//        if let resturantTable = restaurantTable {
-//            return resturantTable.bounds.height / CGFloat(maxRows)
-//        }
-        return 66.0
+        return tableView.bounds.height / Parameters.maxRows
     }
 
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return fixedRowHeight()
     }
 }
+
+extension ForecastView : UIScrollViewDelegate {
+
+    /// technically a UITableViewDelegate _is a_ UIScrollViewDelegate, but it
+    /// clearer to separate what belongs to the scrolView from what belongs
+    /// to the tableView.
+
+    /// This is so that when the table free scrolls in an intertial move it
+    /// stops at cell boundaries, never displaying an incomplete cell.
+
+    func scrollViewWillEndDragging(
+        scrollView:                 UIScrollView
+        ,   withVelocity velocity:      CGPoint
+        ,   targetContentOffset:        UnsafeMutablePointer<CGPoint>) {
+
+        targetContentOffset.memory = scrollView.snapToIntegerRowForProposedContentOffset(
+            targetContentOffset.memory
+        ,   rowHeight:  self.fixedRowHeight())
+    }
+}
+
