@@ -31,6 +31,10 @@ No nib, no storyboard, layout "by hand". With, _not so surprisingly_, very littl
 
 A variant of MVC that is much cleaner, simpler, easier to maintain. I can rant about it all day long :)
 
+## Network and REST
+
+A simple `Network` struct that just tunnels the request to/from the server with no application knowledge, A `Configuration` (and its extensions) used by the `Loader` struct that does know about OpenWeather requirements.
+
 ## User Interface
 
 The simplest I could think of. Scales across iPhone models. The choice I made is to have 7 rows exactly whose height varies according to the device.
