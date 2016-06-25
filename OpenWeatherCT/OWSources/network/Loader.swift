@@ -72,16 +72,17 @@ struct Loader {
                     if let result = try NSJSONSerialization.JSONObjectWithData(data, options: [.MutableContainers, .AllowFragments]) as? [String:AnyObject] {
                         let forecast = WeatherForecast.decode(result)
                         callCompletion(forecast)
+                        return
                     }
                 } catch {
                     print(error)
-                    callCompletion()
                 }
 
             } else if let error = error {
                 print(error)
-                callCompletion()
             }
+            /// this returns a `.None` forecast
+            callCompletion()
         }
     }
 

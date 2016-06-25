@@ -39,7 +39,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-
     func applicationDidBecomeActive(application: UIApplication) {
         print("applicationDidBecomeActive")
     }
@@ -59,6 +58,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         print("applicationWillEnterForeground")
     }
-
 }
 
