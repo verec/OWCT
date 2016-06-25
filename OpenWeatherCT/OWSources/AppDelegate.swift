@@ -42,7 +42,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         print("applicationDidBecomeActive")
-//        queryCL()
     }
 
     func applicationWillResignActive(application: UIApplication) {

@@ -60,7 +60,7 @@ struct Loader {
         }
 
         /// the network call happens on serail queue #1
-        WellKnown.Network.weatherAPI.load(query: dict) {
+        WellKnown.Network.weatherAPI.load(fullURL: Configuration.URL(query: dict)) {
             (error, data) in
 
             /// we're back on the main thread here.
@@ -101,7 +101,7 @@ struct Loader {
         }
 
         /// the network call happens on serail queue #1
-        WellKnown.Network.weatherAPI.load(icon: icon) {
+        WellKnown.Network.weatherAPI.load(fullURL: Configuration.URL(icon: icon)) {
             (error, data) in
 
             /// we're back on the main thread here.
@@ -120,5 +120,63 @@ struct Loader {
                 callCompletion()
             }
         }
+    }
+}
+
+extension Configuration {
+
+    /*
+     Example:
+
+     "http://api.openweathermap.org/data/2.5/forecast?q=London,uk&mode=json&appid=965c55c4f42900256742bc60d5dd1d89&cnt=5"
+
+     Note: this being iOS9 and the endpoint being http (not https) this requires
+     a special entry in the plist:
+
+     <key>NSAppTransportSecurity</key>
+     <dict>
+         <key>NSAllowsArbitraryLoads</key>
+             <true/>
+     </dict>
+
+     */
+
+    static let iconEndPoint =   "http://openweathermap.org/img/w/"
+    static let baseEndPoint =   "http://api.openweathermap.org/data/2.5/forecast"
+    static let apiKey       =   "965c55c4f42900256742bc60d5dd1d89"
+
+    static func configuredEndPoint(query:[String:String]) -> String {
+
+        let baseDict:[String:String] = [
+            "mode":     "json"
+        ,   "appid":    apiKey
+        ,   "units":    "metric"
+        ]
+
+        var configured = baseEndPoint
+        var sep = "?"
+
+        func appendQueryItemsFromDict(dict: [String:String]) {
+            for (key, value) in dict {
+                configured += "\(sep)\(key)=\(value)"
+                sep = "&"
+            }
+        }
+
+        appendQueryItemsFromDict(baseDict)
+        appendQueryItemsFromDict(query)
+        
+        return configured
+    }
+}
+
+extension Configuration {
+
+    static func URL(query query:[String:String]) -> NSURL? {
+        return NSURL(string: Configuration.configuredEndPoint(query))
+    }
+
+    static func URL(icon icon:String) -> NSURL? {
+        return NSURL(string: Configuration.iconEndPoint + icon + ".png")
     }
 }
