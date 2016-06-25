@@ -18,7 +18,13 @@ JSON manual parsing (via `NSJSONSerialization.JSONObjectWithData` obviously) bec
 
 ## Architecture
 
-No nib, no storyboard, layout "by hand". With, _not so surprisingly_, very little code (all in the `layoutSubviews` methods). No need for the overkill, over-engineered and far from complete `AutoLayout`, when all you need to get _exactly_ what you want is a few extension on the `CGRect` struct (provided).
+No nib, no storyboard, layout "by hand". With, _not so surprisingly_, very little code (all in the `layoutSubviews` methods). No need for the overkill, over-engineered and far from complete `AutoLayout`, when all you need to get _exactly_ what you want is a few extension on the `CGRect` struct (provided). e.g.:
+
+
+        let top = self.bounds.top(Sizes.CitySelector.height)  
+        let mid = self.bounds.shrink(.Top, by: Sizes.CitySelector.height)  
+                             .shrink(.Bottom, by: Sizes.Guides.bottomGuide)  
+                             .insetBy(dx:30.0, dy: 0.0)  
 
 A variant of MVC that is much cleaner, simpler, easier to maintain. I can rant about it all day long :)
 
