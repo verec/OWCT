@@ -23,7 +23,7 @@ class OpenWeatherCTNewTests: XCTestCase {
     }
     
     func testConfigurationLatLon() {
-        let created  = Configuration.create(latitude: 10.0, longitude: -10.0)
+        let created  = Configuration(latitude: 10.0, longitude: -10.0)
 
         let noCity = created.city == .None
         let noCountry = created.country == .None
@@ -33,6 +33,5 @@ class OpenWeatherCTNewTests: XCTestCase {
         let yesLon = created.longitude == -10.0
 
         XCTAssert(noCity && noCountry && noCityCode && yesLat && yesLon)
-        
     }    
 }
