@@ -1,8 +1,8 @@
 //
-//  OpenWeatherCTTests.swift
-//  OpenWeatherCTTests
+//  OpenWeatherCTNewTests.swift
+//  OpenWeatherCTNewTests
 //
-//  Created by verec on 23/06/2016.
+//  Created by verec on 25/06/2016.
 //  Copyright © 2016 Cantabilabs Ltd. All rights reserved.
 //
 
@@ -10,7 +10,7 @@ import XCTest
 
 @testable import OpenWeatherCT
 
-class OpenWeatherCTTests: XCTestCase {
+class OpenWeatherCTNewTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -33,6 +33,6 @@ class OpenWeatherCTTests: XCTestCase {
         let yesLon = created.longitude == -10.0
 
         XCTAssert(noCity && noCountry && noCityCode && yesLat && yesLon)
-
+        
     }    
 }

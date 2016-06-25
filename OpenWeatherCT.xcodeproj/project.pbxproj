@@ -11,44 +11,12 @@
 		F31EFDDE1D1BF19A00797850 /* GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EFDDD1D1BF19A00797850 /* GCD.swift */; };
 		F31EFDE01D1BF42600797850 /* Features.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EFDDF1D1BF42600797850 /* Features.swift */; };
 		F31EFDE41D1BF85100797850 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EFDE31D1BF85100797850 /* Loader.swift */; };
-		F31EFDEF1D1C6A4400797850 /* OpenWeatherCTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EFDEE1D1C6A4400797850 /* OpenWeatherCTTests.swift */; };
 		F31EFDF71D1CB23400797850 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EFDF61D1CB23400797850 /* Configuration.swift */; };
 		F31EFDF91D1CB8B400797850 /* WellKnown.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EFDF81D1CB8B400797850 /* WellKnown.swift */; };
-		F31EFDFA1D1CB8B400797850 /* WellKnown.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EFDF81D1CB8B400797850 /* WellKnown.swift */; };
 		F31EFDFF1D1CBF7F00797850 /* Presets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EFDFE1D1CBF7F00797850 /* Presets.swift */; };
 		F31EFE011D1CBF9300797850 /* ForecastLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EFDFB1D1CB9EE00797850 /* ForecastLoader.swift */; };
 		F31EFE031D1CC42B00797850 /* Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EFE021D1CC42B00797850 /* Sizes.swift */; };
 		F31EFE0B1D1CCDD800797850 /* ForecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EFE091D1CCDD800797850 /* ForecastCell.swift */; };
-		F31EFE0C1D1CCDD800797850 /* ForecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EFE091D1CCDD800797850 /* ForecastCell.swift */; };
-		F367CFA81D1CF77B00AF1993 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C541D1BD87A001FE3D6 /* AppDelegate.swift */; };
-		F367CFA91D1CF77F00AF1993 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C561D1BD900001FE3D6 /* TopView.swift */; };
-		F367CFAA1D1CF78300AF1993 /* ForecastLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EFDFB1D1CB9EE00797850 /* ForecastLoader.swift */; };
-		F367CFAB1D1CF78D00AF1993 /* ForecastCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EFE0F1D1CCE6800797850 /* ForecastCellView.swift */; };
-		F367CFAC1D1CF79100AF1993 /* ForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EFE0A1D1CCDD800797850 /* ForecastView.swift */; };
-		F367CFAD1D1CF79600AF1993 /* WeatherRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EFDE51D1BF8CA00797850 /* WeatherRecord.swift */; };
-		F367CFAE1D1CF79900AF1993 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EFDF61D1CB23400797850 /* Configuration.swift */; };
-		F367CFAF1D1CF79D00AF1993 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EFDDA1D1BECAA00797850 /* Network.swift */; };
-		F367CFB01D1CF7A100AF1993 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EFDE31D1BF85100797850 /* Loader.swift */; };
-		F367CFB11D1CF7A500AF1993 /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C581D1BD96E001FE3D6 /* Views.swift */; };
-		F367CFB51D1CF7AC00AF1993 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3926DD21D1CDFE600932F3E /* Fonts.swift */; };
-		F367CFB61D1CF7AC00AF1993 /* Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EFE021D1CC42B00797850 /* Sizes.swift */; };
-		F367CFB71D1CF7AC00AF1993 /* Presets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EFDFE1D1CBF7F00797850 /* Presets.swift */; };
-		F367CFB81D1CF7AC00AF1993 /* Features.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EFDDF1D1BF42600797850 /* Features.swift */; };
-		F367CFB91D1CF7AC00AF1993 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C5D1D1BDA3B001FE3D6 /* Colors.swift */; };
-		F367CFC11D1CF7C700AF1993 /* Top.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C511D1BD86C001FE3D6 /* Top.swift */; };
-		F367CFC21D1CF7C700AF1993 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C701D1BDAE2001FE3D6 /* ColorPalette.swift */; };
-		F367CFC31D1CF7C700AF1993 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C8C1D1BDF92001FE3D6 /* Math.swift */; };
-		F367CFC41D1CF7C700AF1993 /* GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EFDDD1D1BF19A00797850 /* GCD.swift */; };
-		F367CFC51D1CF7CE00AF1993 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C7B1D1BDF4E001FE3D6 /* CGPoint.swift */; };
-		F367CFC61D1CF7CE00AF1993 /* CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C7C1D1BDF4E001FE3D6 /* CGRect.swift */; };
-		F367CFC71D1CF7CE00AF1993 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C7D1D1BDF4E001FE3D6 /* Double.swift */; };
-		F367CFC81D1CF7CE00AF1993 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C7E1D1BDF4E001FE3D6 /* Int.swift */; };
-		F367CFC91D1CF7CE00AF1993 /* NSDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C7F1D1BDF4E001FE3D6 /* NSDate.swift */; };
-		F367CFCA1D1CF7CE00AF1993 /* NSRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C801D1BDF4E001FE3D6 /* NSRange.swift */; };
-		F367CFCB1D1CF7CE00AF1993 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C811D1BDF4E001FE3D6 /* String.swift */; };
-		F367CFCC1D1CF7CE00AF1993 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C821D1BDF4E001FE3D6 /* UIColor.swift */; };
-		F367CFCD1D1CF7CE00AF1993 /* UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3926DE81D1CE9AC00932F3E /* UIScrollView.swift */; };
-		F367CFCE1D1CF7CE00AF1993 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C5B1D1BDA0A001FE3D6 /* UIView.swift */; };
 		F367CFCF1D1E1D7000AF1993 /* NSDate+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = F3926DE41D1CE69500932F3E /* NSDate+Additions.m */; };
 		F367CFD01D1E1D7000AF1993 /* NSMutableArray+Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C781D1BDBFE001FE3D6 /* NSMutableArray+Stack.m */; };
 		F367CFD11D1E1D7000AF1993 /* SExp.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C611D1BDA6D001FE3D6 /* SExp.m */; };
@@ -56,13 +24,7 @@
 		F367CFD31D1E1D7000AF1993 /* SExpTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C651D1BDA6D001FE3D6 /* SExpTokenizer.m */; };
 		F367CFD41D1E1D7000AF1993 /* SExpValidityChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C671D1BDA6D001FE3D6 /* SExpValidityChecker.m */; };
 		F367CFD51D1E1D7000AF1993 /* SimpleUnicharInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C691D1BDA6D001FE3D6 /* SimpleUnicharInputStream.m */; };
-		F367CFD61D1E1D7100AF1993 /* NSDate+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = F3926DE41D1CE69500932F3E /* NSDate+Additions.m */; };
-		F367CFD71D1E1D7100AF1993 /* NSMutableArray+Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C781D1BDBFE001FE3D6 /* NSMutableArray+Stack.m */; };
-		F367CFD81D1E1D7100AF1993 /* SExp.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C611D1BDA6D001FE3D6 /* SExp.m */; };
-		F367CFD91D1E1D7100AF1993 /* SExpIO.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C631D1BDA6D001FE3D6 /* SExpIO.m */; };
-		F367CFDA1D1E1D7100AF1993 /* SExpTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C651D1BDA6D001FE3D6 /* SExpTokenizer.m */; };
-		F367CFDB1D1E1D7100AF1993 /* SExpValidityChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C671D1BDA6D001FE3D6 /* SExpValidityChecker.m */; };
-		F367CFDC1D1E1D7100AF1993 /* SimpleUnicharInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C691D1BDA6D001FE3D6 /* SimpleUnicharInputStream.m */; };
+		F367CFE41D1E252600AF1993 /* OpenWeatherCTNewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F367CFE31D1E252600AF1993 /* OpenWeatherCTNewTests.swift */; };
 		F3926DD31D1CDFE600932F3E /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3926DD21D1CDFE600932F3E /* Fonts.swift */; };
 		F3926DD51D1CE2F100932F3E /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C7B1D1BDF4E001FE3D6 /* CGPoint.swift */; };
 		F3926DDA1D1CE2FF00932F3E /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C7D1D1BDF4E001FE3D6 /* Double.swift */; };
@@ -91,7 +53,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F31EFDF11D1C6A4400797850 /* PBXContainerItemProxy */ = {
+		F367CFE61D1E252600AF1993 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F3E47C311D1BD666001FE3D6 /* Project object */;
 			proxyType = 1;
@@ -106,9 +68,6 @@
 		F31EFDDF1D1BF42600797850 /* Features.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Features.swift; path = globals/Features.swift; sourceTree = "<group>"; };
 		F31EFDE31D1BF85100797850 /* Loader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Loader.swift; path = network/Loader.swift; sourceTree = "<group>"; };
 		F31EFDE51D1BF8CA00797850 /* WeatherRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeatherRecord.swift; path = model/WeatherRecord.swift; sourceTree = "<group>"; };
-		F31EFDEC1D1C6A4400797850 /* OpenWeatherCTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenWeatherCTTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F31EFDEE1D1C6A4400797850 /* OpenWeatherCTTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherCTTests.swift; sourceTree = "<group>"; };
-		F31EFDF01D1C6A4400797850 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F31EFDF61D1CB23400797850 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Configuration.swift; path = network/Configuration.swift; sourceTree = "<group>"; };
 		F31EFDF81D1CB8B400797850 /* WellKnown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WellKnown.swift; sourceTree = "<group>"; };
 		F31EFDFB1D1CB9EE00797850 /* ForecastLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastLoader.swift; sourceTree = "<group>"; };
@@ -117,6 +76,9 @@
 		F31EFE091D1CCDD800797850 /* ForecastCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastCell.swift; sourceTree = "<group>"; };
 		F31EFE0A1D1CCDD800797850 /* ForecastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastView.swift; sourceTree = "<group>"; };
 		F31EFE0F1D1CCE6800797850 /* ForecastCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastCellView.swift; sourceTree = "<group>"; };
+		F367CFE11D1E252600AF1993 /* OpenWeatherCTNewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenWeatherCTNewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F367CFE31D1E252600AF1993 /* OpenWeatherCTNewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherCTNewTests.swift; sourceTree = "<group>"; };
+		F367CFE51D1E252600AF1993 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3926DD21D1CDFE600932F3E /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Fonts.swift; path = globals/Fonts.swift; sourceTree = "<group>"; };
 		F3926DE31D1CE69500932F3E /* NSDate+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Additions.h"; sourceTree = "<group>"; };
 		F3926DE41D1CE69500932F3E /* NSDate+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Additions.m"; sourceTree = "<group>"; };
@@ -159,7 +121,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F31EFDE91D1C6A4400797850 /* Frameworks */ = {
+		F367CFDE1D1E252600AF1993 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -194,15 +156,6 @@
 			name = model;
 			sourceTree = "<group>";
 		};
-		F31EFDED1D1C6A4400797850 /* OpenWeatherCTTests */ = {
-			isa = PBXGroup;
-			children = (
-				F31EFDEE1D1C6A4400797850 /* OpenWeatherCTTests.swift */,
-				F31EFDF01D1C6A4400797850 /* Info.plist */,
-			);
-			path = OpenWeatherCTTests;
-			sourceTree = "<group>";
-		};
 		F31EFE081D1CCDD800797850 /* forecastview */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,11 +166,20 @@
 			path = forecastview;
 			sourceTree = "<group>";
 		};
+		F367CFE21D1E252600AF1993 /* OpenWeatherCTNewTests */ = {
+			isa = PBXGroup;
+			children = (
+				F367CFE31D1E252600AF1993 /* OpenWeatherCTNewTests.swift */,
+				F367CFE51D1E252600AF1993 /* Info.plist */,
+			);
+			path = OpenWeatherCTNewTests;
+			sourceTree = "<group>";
+		};
 		F3E47C301D1BD666001FE3D6 = {
 			isa = PBXGroup;
 			children = (
 				F3E47C3B1D1BD666001FE3D6 /* OpenWeatherCT */,
-				F31EFDED1D1C6A4400797850 /* OpenWeatherCTTests */,
+				F367CFE21D1E252600AF1993 /* OpenWeatherCTNewTests */,
 				F3E47C3A1D1BD666001FE3D6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -226,7 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				F3E47C391D1BD666001FE3D6 /* OpenWeatherCT.app */,
-				F31EFDEC1D1C6A4400797850 /* OpenWeatherCTTests.xctest */,
+				F367CFE11D1E252600AF1993 /* OpenWeatherCTNewTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -336,22 +298,22 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F31EFDEB1D1C6A4400797850 /* OpenWeatherCTTests */ = {
+		F367CFE01D1E252600AF1993 /* OpenWeatherCTNewTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F31EFDF51D1C6A4400797850 /* Build configuration list for PBXNativeTarget "OpenWeatherCTTests" */;
+			buildConfigurationList = F367CFE81D1E252600AF1993 /* Build configuration list for PBXNativeTarget "OpenWeatherCTNewTests" */;
 			buildPhases = (
-				F31EFDE81D1C6A4400797850 /* Sources */,
-				F31EFDE91D1C6A4400797850 /* Frameworks */,
-				F31EFDEA1D1C6A4400797850 /* Resources */,
+				F367CFDD1D1E252600AF1993 /* Sources */,
+				F367CFDE1D1E252600AF1993 /* Frameworks */,
+				F367CFDF1D1E252600AF1993 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F31EFDF21D1C6A4400797850 /* PBXTargetDependency */,
+				F367CFE71D1E252600AF1993 /* PBXTargetDependency */,
 			);
-			name = OpenWeatherCTTests;
-			productName = OpenWeatherCTTests;
-			productReference = F31EFDEC1D1C6A4400797850 /* OpenWeatherCTTests.xctest */;
+			name = OpenWeatherCTNewTests;
+			productName = OpenWeatherCTNewTests;
+			productReference = F367CFE11D1E252600AF1993 /* OpenWeatherCTNewTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		F3E47C381D1BD666001FE3D6 /* OpenWeatherCT */ = {
@@ -381,7 +343,7 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Cantabilabs Ltd";
 				TargetAttributes = {
-					F31EFDEB1D1C6A4400797850 = {
+					F367CFE01D1E252600AF1993 = {
 						CreatedOnToolsVersion = 7.3.1;
 						TestTargetID = F3E47C381D1BD666001FE3D6;
 					};
@@ -404,13 +366,13 @@
 			projectRoot = "";
 			targets = (
 				F3E47C381D1BD666001FE3D6 /* OpenWeatherCT */,
-				F31EFDEB1D1C6A4400797850 /* OpenWeatherCTTests */,
+				F367CFE01D1E252600AF1993 /* OpenWeatherCTNewTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F31EFDEA1D1C6A4400797850 /* Resources */ = {
+		F367CFDF1D1E252600AF1993 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -431,49 +393,11 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F31EFDE81D1C6A4400797850 /* Sources */ = {
+		F367CFDD1D1E252600AF1993 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F367CFB51D1CF7AC00AF1993 /* Fonts.swift in Sources */,
-				F367CFB91D1CF7AC00AF1993 /* Colors.swift in Sources */,
-				F367CFC71D1CF7CE00AF1993 /* Double.swift in Sources */,
-				F367CFC61D1CF7CE00AF1993 /* CGRect.swift in Sources */,
-				F367CFB81D1CF7AC00AF1993 /* Features.swift in Sources */,
-				F367CFC31D1CF7C700AF1993 /* Math.swift in Sources */,
-				F367CFAF1D1CF79D00AF1993 /* Network.swift in Sources */,
-				F367CFAD1D1CF79600AF1993 /* WeatherRecord.swift in Sources */,
-				F367CFC11D1CF7C700AF1993 /* Top.swift in Sources */,
-				F367CFA91D1CF77F00AF1993 /* TopView.swift in Sources */,
-				F367CFD81D1E1D7100AF1993 /* SExp.m in Sources */,
-				F367CFD91D1E1D7100AF1993 /* SExpIO.m in Sources */,
-				F367CFAC1D1CF79100AF1993 /* ForecastView.swift in Sources */,
-				F367CFA81D1CF77B00AF1993 /* AppDelegate.swift in Sources */,
-				F367CFB61D1CF7AC00AF1993 /* Sizes.swift in Sources */,
-				F367CFCE1D1CF7CE00AF1993 /* UIView.swift in Sources */,
-				F367CFC41D1CF7C700AF1993 /* GCD.swift in Sources */,
-				F367CFD61D1E1D7100AF1993 /* NSDate+Additions.m in Sources */,
-				F367CFC91D1CF7CE00AF1993 /* NSDate.swift in Sources */,
-				F367CFCA1D1CF7CE00AF1993 /* NSRange.swift in Sources */,
-				F367CFC81D1CF7CE00AF1993 /* Int.swift in Sources */,
-				F31EFE0C1D1CCDD800797850 /* ForecastCell.swift in Sources */,
-				F367CFCC1D1CF7CE00AF1993 /* UIColor.swift in Sources */,
-				F367CFAE1D1CF79900AF1993 /* Configuration.swift in Sources */,
-				F367CFCD1D1CF7CE00AF1993 /* UIScrollView.swift in Sources */,
-				F367CFB11D1CF7A500AF1993 /* Views.swift in Sources */,
-				F367CFAB1D1CF78D00AF1993 /* ForecastCellView.swift in Sources */,
-				F31EFDEF1D1C6A4400797850 /* OpenWeatherCTTests.swift in Sources */,
-				F367CFD71D1E1D7100AF1993 /* NSMutableArray+Stack.m in Sources */,
-				F367CFDB1D1E1D7100AF1993 /* SExpValidityChecker.m in Sources */,
-				F367CFC21D1CF7C700AF1993 /* ColorPalette.swift in Sources */,
-				F367CFAA1D1CF78300AF1993 /* ForecastLoader.swift in Sources */,
-				F367CFDA1D1E1D7100AF1993 /* SExpTokenizer.m in Sources */,
-				F367CFCB1D1CF7CE00AF1993 /* String.swift in Sources */,
-				F367CFB01D1CF7A100AF1993 /* Loader.swift in Sources */,
-				F367CFDC1D1E1D7100AF1993 /* SimpleUnicharInputStream.m in Sources */,
-				F367CFB71D1CF7AC00AF1993 /* Presets.swift in Sources */,
-				F367CFC51D1CF7CE00AF1993 /* CGPoint.swift in Sources */,
-				F31EFDFA1D1CB8B400797850 /* WellKnown.swift in Sources */,
+				F367CFE41D1E252600AF1993 /* OpenWeatherCTNewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,10 +449,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F31EFDF21D1C6A4400797850 /* PBXTargetDependency */ = {
+		F367CFE71D1E252600AF1993 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F3E47C381D1BD666001FE3D6 /* OpenWeatherCT */;
-			targetProxy = F31EFDF11D1C6A4400797850 /* PBXContainerItemProxy */;
+			targetProxy = F367CFE61D1E252600AF1993 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -544,28 +468,26 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		F31EFDF31D1C6A4400797850 /* Debug */ = {
+		F367CFE91D1E252600AF1993 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = OpenWeatherCTTests/Info.plist;
+				INFOPLIST_FILE = OpenWeatherCTNewTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = uk.co.cantabilabs.OpenWeatherCTTests;
+				PRODUCT_BUNDLE_IDENTIFIER = uk.co.cantabilabs.OpenWeatherCTNewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "OpenWeatherCT/OWSources/OpenWeatherCT-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenWeatherCT.app/OpenWeatherCT";
 			};
 			name = Debug;
 		};
-		F31EFDF41D1C6A4400797850 /* Release */ = {
+		F367CFEA1D1E252600AF1993 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = OpenWeatherCTTests/Info.plist;
+				INFOPLIST_FILE = OpenWeatherCTNewTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = uk.co.cantabilabs.OpenWeatherCTTests;
+				PRODUCT_BUNDLE_IDENTIFIER = uk.co.cantabilabs.OpenWeatherCTNewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "OpenWeatherCT/OWSources/OpenWeatherCT-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenWeatherCT.app/OpenWeatherCT";
 			};
 			name = Release;
@@ -685,14 +607,13 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F31EFDF51D1C6A4400797850 /* Build configuration list for PBXNativeTarget "OpenWeatherCTTests" */ = {
+		F367CFE81D1E252600AF1993 /* Build configuration list for PBXNativeTarget "OpenWeatherCTNewTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F31EFDF31D1C6A4400797850 /* Debug */,
-				F31EFDF41D1C6A4400797850 /* Release */,
+				F367CFE91D1E252600AF1993 /* Debug */,
+				F367CFEA1D1E252600AF1993 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		F3E47C341D1BD666001FE3D6 /* Build configuration list for PBXProject "OpenWeatherCT" */ = {
 			isa = XCConfigurationList;
