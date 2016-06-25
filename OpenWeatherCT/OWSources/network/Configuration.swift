@@ -44,17 +44,5 @@ struct Configuration : CustomDebugStringConvertible {
         self.longitude = longitude
         self.lineCount = lineCount
     }
-
-    static func create(latitude latitude: Double, longitude:Double, recordCount:Int? = .None) -> Configuration {
-        return Configuration(latitude: latitude, longitude: longitude, lineCount: recordCount)
-    }
-
-    static func create(city city: String, country:String, recordCount:Int? = .None) -> Configuration {
-        return Configuration(city: city, country: country, lineCount: recordCount)
-    }
-
-    static func create(cityCode: String, recordCount:Int? = .None) -> Configuration {
-        return Configuration(cityCode: cityCode, lineCount: recordCount)
-    }
 }
 

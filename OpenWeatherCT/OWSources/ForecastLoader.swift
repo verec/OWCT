@@ -19,12 +19,12 @@ struct ForecastLoader {
     }
 
     func load(cityCode:String) {
-        let configuration = Configuration.create(cityCode)
+        let configuration = Configuration(cityCode:cityCode)
         WellKnown.Network.loader.load(configuration) { self.applyForecast($0) }
     }
 
     func load(city: String, country: String) {
-        let configuration = Configuration.create(city: city, country: country)
+        let configuration = Configuration(city: city, country: country)
         WellKnown.Network.loader.load(configuration) { self.applyForecast($0) }
     }
 }
