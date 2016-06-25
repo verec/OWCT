@@ -35,3 +35,7 @@ For `WeatherForecast` and `WeatherRecord`
 ## Structs vereywhere
 
 Unless there is an interaction needed somehow with `UIKit`
+
+## Alternative UI.
+
+Take a lesson from Apple watchOS and present each day as a circle with 6 points for 0, 3, 6, 12, 15 & 18, with only temp+icon (ignore wind), with one such circle per cell, and the name of the day of the week as label for the whole circle. Since I currently have seven rows, this is a perfect fit for "weather in the next 7 days".
