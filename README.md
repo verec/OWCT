@@ -8,7 +8,7 @@ You will need Xcode 7.3.1 and Swift 2.2 _this has *not* been ported to Swift 3_
 
 ## Libraries
 
-I used a lot of my own libraries for the UI side, though no external dependency at all, no CocoaPods no Carthage, etc ...
+I used some of my own libraries for the UI side, though no external dependency at all, no CocoaPods no Carthage, etc ...
 
 ## Design
 
@@ -18,7 +18,7 @@ JSON manual parsing (via `NSJSONSerialization.JSONObjectWithData` obviously) bec
 
 ## Architecture
 
-No nib, no storyboard, layout "by hand".
+No nib, no storyboard, layout "by hand". With, _not so surprisingly_, very little code (all in the `layoutSubViews` methods). No need for the overkill, over-engineered and far from complete `AutoLayout`, when all you need to get _exactly_ what you want is a few extension on the `CGRect` struct (provided).
 
 A variant of MVC that is much cleaner, simpler, easier to maintain. I can rant about it all day long :)
 
