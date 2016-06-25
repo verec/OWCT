@@ -1,6 +1,6 @@
 ## OWCT
 I stopped at the point I could switch cities between Paris and London and had at least temperature, wind speed and day+time on display  
-See [the screen cast](https://github.com/verec/OWCT/blob/master/OW.mov)
+See [the screen cast](https://www.dropbox.com/s/6p1v9snwe5o2c79/OW.mov?dl=0)
 
 ## To Compile
 
