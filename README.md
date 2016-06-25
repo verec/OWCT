@@ -56,3 +56,13 @@ This needs doing. Right now network errors are simply ignored and nothing happen
 ## Alternative UI
 
 Take a lesson from Apple watchOS and present each day as a circle with 6 points for 0, 3, 6, 12, 15 & 18, with only temp+icon (ignore wind), with one such circle per cell, and the name of the day of the week as label for the whole circle. Since I currently have seven rows, this is a perfect fit for "weather in the next 7 days".
+
+## Unit Tests
+
+Extremely minimal (just one method of the `Configuration`).
+
+At the minimum we would need to  unit test JSON parsing with a bunch of sample JSON answers stored in the bundle, and checking that the resulting `WeatherForecast` and `WeatheRecord` match expectations.
+
+More generaly, anything that can be seen as a _pure function_, for example data processing/transformation (as in JSON processing alluded above) should be unit tested.
+
+Note that my architecture, by exposing well known applications entitites through the `WellKnown` structs facilitates testing without mocks.
