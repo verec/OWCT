@@ -282,9 +282,6 @@ struct WeatherForecast {
             print("no weather record received")
             return .None
         }
-        func unhandled(key: String, value:AnyObject) {
-            print("unhandled key \(key), value is \(value)")
-        }
 
         let sortedRecord = records.sort {
             let r0 = $0

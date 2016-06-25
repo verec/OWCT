@@ -8,60 +8,68 @@
 
 import Foundation
 
-struct Network {
+extension Configuration {
 
-    struct Configuration {
+    /*
+     Example:
 
-/*
-    Example:
+     "http://api.openweathermap.org/data/2.5/forecast?q=London,uk&mode=json&appid=965c55c4f42900256742bc60d5dd1d89&cnt=5"
 
-    "http://api.openweathermap.org/data/2.5/forecast?q=London,uk&mode=json&appid=965c55c4f42900256742bc60d5dd1d89&cnt=5"
-         
-    Note: this being iOS9 and the endpoint being http (not https) this requires
-    a special entry in the plist:
-         
-    <key>NSAppTransportSecurity</key>
-    <dict>
-         <key>NSAllowsArbitraryLoads</key>
-         <true/>
-    </dict>
+     Note: this being iOS9 and the endpoint being http (not https) this requires
+     a special entry in the plist:
 
- */
+     <key>NSAppTransportSecurity</key>
+     <dict>
+     <key>NSAllowsArbitraryLoads</key>
+     <true/>
+     </dict>
 
-        static let iconEndPoint =   "http://openweathermap.org/img/w/"
-        static let baseEndPoint =   "http://api.openweathermap.org/data/2.5/forecast"
-        static let apiKey       =   "965c55c4f42900256742bc60d5dd1d89"
+     */
 
-        static func configuredEndPoint(query:[String:String]) -> String {
+    static let iconEndPoint =   "http://openweathermap.org/img/w/"
+    static let baseEndPoint =   "http://api.openweathermap.org/data/2.5/forecast"
+    static let apiKey       =   "965c55c4f42900256742bc60d5dd1d89"
 
-            let baseDict:[String:String] = [
-                "mode":     "json"
-            ,   "appid":    apiKey
-            ,   "units":    "metric"
-            ]
+    static func configuredEndPoint(query:[String:String]) -> String {
 
-            var configured = baseEndPoint
-            var sep = "?"
+        let baseDict:[String:String] = [
+            "mode":     "json"
+        ,   "appid":    apiKey
+        ,   "units":    "metric"
+        ]
 
-            func appendQueryItemsFromDict(dict: [String:String]) {
-                for (key, value) in dict {
-                    configured += "\(sep)\(key)=\(value)"
-                    sep = "&"
-                }
+        var configured = baseEndPoint
+        var sep = "?"
+
+        func appendQueryItemsFromDict(dict: [String:String]) {
+            for (key, value) in dict {
+                configured += "\(sep)\(key)=\(value)"
+                sep = "&"
             }
-
-            appendQueryItemsFromDict(baseDict)
-            appendQueryItemsFromDict(query)
-            
-            return configured
         }
+
+        appendQueryItemsFromDict(baseDict)
+        appendQueryItemsFromDict(query)
+
+        return configured
     }
+}
+
+struct Network {
 
     typealias MainThreadConmpletiuon = (NSError?, NSData?)->()
 
-    func load(
-        fullURL:        NSURL?
-    ,   uiCallWhenDone: MainThreadConmpletiuon) {
+    func load(query query: [String:String], uiCallWhenDone: MainThreadConmpletiuon) {
+        load(   fullURL: NSURL(string: Configuration.configuredEndPoint(query))
+            ,   uiCallWhenDone: uiCallWhenDone)
+    }
+
+    func load(icon icon: String, uiCallWhenDone: MainThreadConmpletiuon) {
+        load(   fullURL: NSURL(string: Configuration.iconEndPoint + icon + ".png")
+            ,   uiCallWhenDone: uiCallWhenDone)
+    }
+
+    func load(fullURL fullURL: NSURL?, uiCallWhenDone: MainThreadConmpletiuon) {
 
         func callCompletion(error:NSError?, data: NSData?) {
             GCD.MainQueue.async {
@@ -96,20 +104,5 @@ struct Network {
                 callCompletion(NSError(domain: "invalid url endpoint", code: -1, userInfo: nil), data: nil)
             }
         }
-    }
-    
-
-    func load(
-        query:          [String:String]
-    ,   uiCallWhenDone: MainThreadConmpletiuon) {
-
-        load(NSURL(string: Configuration.configuredEndPoint(query)), uiCallWhenDone: uiCallWhenDone)
-    }
-    
-    func load(
-        icon:           String
-    ,   uiCallWhenDone: MainThreadConmpletiuon) {
-
-        load(NSURL(string: Configuration.iconEndPoint + icon + ".png"), uiCallWhenDone: uiCallWhenDone)
     }
 }

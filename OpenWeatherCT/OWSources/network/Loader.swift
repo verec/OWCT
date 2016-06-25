@@ -60,7 +60,7 @@ struct Loader {
         }
 
         /// the network call happens on serail queue #1
-        WellKnown.Network.weatherAPI.load(dict) {
+        WellKnown.Network.weatherAPI.load(query: dict) {
             (error, data) in
 
             /// we're back on the main thread here.
@@ -101,7 +101,7 @@ struct Loader {
         }
 
         /// the network call happens on serail queue #1
-        WellKnown.Network.weatherAPI.load(icon) {
+        WellKnown.Network.weatherAPI.load(icon: icon) {
             (error, data) in
 
             /// we're back on the main thread here.
