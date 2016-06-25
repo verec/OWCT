@@ -24,6 +24,10 @@ No nib, no storyboard, layout "by hand". With, _not so surprisingly_, very littl
         let mid = self.bounds.shrink(.Top, by: Sizes.CitySelector.height)  
                              .shrink(.Bottom, by: Sizes.Guides.bottomGuide)  
                              .insetBy(dx:30.0, dy: 0.0)  
+      
+        citySelector.sizeToFit()  
+        citySelector.frame = citySelector.bounds.centered(intoRect: top)  
+        tableView.frame = mid  
 
 A variant of MVC that is much cleaner, simpler, easier to maintain. I can rant about it all day long :)
 
