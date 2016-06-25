@@ -112,7 +112,7 @@ extension ForecastCellView {
         if let date = weatherRecord.date {
             if let d = WeatherForecast.dateFormatter.dateFromString(date) {
                 let hour = d.hour
-                let dow = d.weekday
+                let dow = d.weekday - 1
                 let symbs = WeatherForecast.dateFormatter.weekdaySymbols
 
                 if dow < symbs.count {

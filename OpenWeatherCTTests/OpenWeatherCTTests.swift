@@ -23,7 +23,7 @@ class OpenWeatherCTTests: XCTestCase {
     }
     
     func testConfigurationLatLon() {
-        let created  = Loader.Configuration.create(latitude: 10.0, longitude: -10.0)
+        let created  = Configuration.create(latitude: 10.0, longitude: -10.0)
 
         let noCity = created.city == .None
         let noCountry = created.country == .None

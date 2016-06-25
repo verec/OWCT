@@ -159,8 +159,8 @@ extension ForecastView : UIScrollViewDelegate {
 
     func scrollViewWillEndDragging(
         scrollView:                 UIScrollView
-        ,   withVelocity velocity:      CGPoint
-        ,   targetContentOffset:        UnsafeMutablePointer<CGPoint>) {
+    ,   withVelocity velocity:      CGPoint
+    ,   targetContentOffset:        UnsafeMutablePointer<CGPoint>) {
 
         targetContentOffset.memory = scrollView.snapToIntegerRowForProposedContentOffset(
             targetContentOffset.memory

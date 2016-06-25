@@ -16,12 +16,53 @@
 		F31EFDF91D1CB8B400797850 /* WellKnown.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EFDF81D1CB8B400797850 /* WellKnown.swift */; };
 		F31EFDFA1D1CB8B400797850 /* WellKnown.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EFDF81D1CB8B400797850 /* WellKnown.swift */; };
 		F31EFDFF1D1CBF7F00797850 /* Presets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EFDFE1D1CBF7F00797850 /* Presets.swift */; };
-		F31EFE001D1CBF7F00797850 /* Presets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EFDFE1D1CBF7F00797850 /* Presets.swift */; };
 		F31EFE011D1CBF9300797850 /* ForecastLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EFDFB1D1CB9EE00797850 /* ForecastLoader.swift */; };
 		F31EFE031D1CC42B00797850 /* Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EFE021D1CC42B00797850 /* Sizes.swift */; };
-		F31EFE041D1CC42B00797850 /* Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EFE021D1CC42B00797850 /* Sizes.swift */; };
 		F31EFE0B1D1CCDD800797850 /* ForecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EFE091D1CCDD800797850 /* ForecastCell.swift */; };
 		F31EFE0C1D1CCDD800797850 /* ForecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EFE091D1CCDD800797850 /* ForecastCell.swift */; };
+		F367CFA81D1CF77B00AF1993 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C541D1BD87A001FE3D6 /* AppDelegate.swift */; };
+		F367CFA91D1CF77F00AF1993 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C561D1BD900001FE3D6 /* TopView.swift */; };
+		F367CFAA1D1CF78300AF1993 /* ForecastLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EFDFB1D1CB9EE00797850 /* ForecastLoader.swift */; };
+		F367CFAB1D1CF78D00AF1993 /* ForecastCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EFE0F1D1CCE6800797850 /* ForecastCellView.swift */; };
+		F367CFAC1D1CF79100AF1993 /* ForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EFE0A1D1CCDD800797850 /* ForecastView.swift */; };
+		F367CFAD1D1CF79600AF1993 /* WeatherRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EFDE51D1BF8CA00797850 /* WeatherRecord.swift */; };
+		F367CFAE1D1CF79900AF1993 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EFDF61D1CB23400797850 /* Configuration.swift */; };
+		F367CFAF1D1CF79D00AF1993 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EFDDA1D1BECAA00797850 /* Network.swift */; };
+		F367CFB01D1CF7A100AF1993 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EFDE31D1BF85100797850 /* Loader.swift */; };
+		F367CFB11D1CF7A500AF1993 /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C581D1BD96E001FE3D6 /* Views.swift */; };
+		F367CFB51D1CF7AC00AF1993 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3926DD21D1CDFE600932F3E /* Fonts.swift */; };
+		F367CFB61D1CF7AC00AF1993 /* Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EFE021D1CC42B00797850 /* Sizes.swift */; };
+		F367CFB71D1CF7AC00AF1993 /* Presets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EFDFE1D1CBF7F00797850 /* Presets.swift */; };
+		F367CFB81D1CF7AC00AF1993 /* Features.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EFDDF1D1BF42600797850 /* Features.swift */; };
+		F367CFB91D1CF7AC00AF1993 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C5D1D1BDA3B001FE3D6 /* Colors.swift */; };
+		F367CFC11D1CF7C700AF1993 /* Top.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C511D1BD86C001FE3D6 /* Top.swift */; };
+		F367CFC21D1CF7C700AF1993 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C701D1BDAE2001FE3D6 /* ColorPalette.swift */; };
+		F367CFC31D1CF7C700AF1993 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C8C1D1BDF92001FE3D6 /* Math.swift */; };
+		F367CFC41D1CF7C700AF1993 /* GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EFDDD1D1BF19A00797850 /* GCD.swift */; };
+		F367CFC51D1CF7CE00AF1993 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C7B1D1BDF4E001FE3D6 /* CGPoint.swift */; };
+		F367CFC61D1CF7CE00AF1993 /* CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C7C1D1BDF4E001FE3D6 /* CGRect.swift */; };
+		F367CFC71D1CF7CE00AF1993 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C7D1D1BDF4E001FE3D6 /* Double.swift */; };
+		F367CFC81D1CF7CE00AF1993 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C7E1D1BDF4E001FE3D6 /* Int.swift */; };
+		F367CFC91D1CF7CE00AF1993 /* NSDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C7F1D1BDF4E001FE3D6 /* NSDate.swift */; };
+		F367CFCA1D1CF7CE00AF1993 /* NSRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C801D1BDF4E001FE3D6 /* NSRange.swift */; };
+		F367CFCB1D1CF7CE00AF1993 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C811D1BDF4E001FE3D6 /* String.swift */; };
+		F367CFCC1D1CF7CE00AF1993 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C821D1BDF4E001FE3D6 /* UIColor.swift */; };
+		F367CFCD1D1CF7CE00AF1993 /* UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3926DE81D1CE9AC00932F3E /* UIScrollView.swift */; };
+		F367CFCE1D1CF7CE00AF1993 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C5B1D1BDA0A001FE3D6 /* UIView.swift */; };
+		F367CFCF1D1E1D7000AF1993 /* NSDate+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = F3926DE41D1CE69500932F3E /* NSDate+Additions.m */; };
+		F367CFD01D1E1D7000AF1993 /* NSMutableArray+Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C781D1BDBFE001FE3D6 /* NSMutableArray+Stack.m */; };
+		F367CFD11D1E1D7000AF1993 /* SExp.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C611D1BDA6D001FE3D6 /* SExp.m */; };
+		F367CFD21D1E1D7000AF1993 /* SExpIO.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C631D1BDA6D001FE3D6 /* SExpIO.m */; };
+		F367CFD31D1E1D7000AF1993 /* SExpTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C651D1BDA6D001FE3D6 /* SExpTokenizer.m */; };
+		F367CFD41D1E1D7000AF1993 /* SExpValidityChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C671D1BDA6D001FE3D6 /* SExpValidityChecker.m */; };
+		F367CFD51D1E1D7000AF1993 /* SimpleUnicharInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C691D1BDA6D001FE3D6 /* SimpleUnicharInputStream.m */; };
+		F367CFD61D1E1D7100AF1993 /* NSDate+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = F3926DE41D1CE69500932F3E /* NSDate+Additions.m */; };
+		F367CFD71D1E1D7100AF1993 /* NSMutableArray+Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C781D1BDBFE001FE3D6 /* NSMutableArray+Stack.m */; };
+		F367CFD81D1E1D7100AF1993 /* SExp.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C611D1BDA6D001FE3D6 /* SExp.m */; };
+		F367CFD91D1E1D7100AF1993 /* SExpIO.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C631D1BDA6D001FE3D6 /* SExpIO.m */; };
+		F367CFDA1D1E1D7100AF1993 /* SExpTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C651D1BDA6D001FE3D6 /* SExpTokenizer.m */; };
+		F367CFDB1D1E1D7100AF1993 /* SExpValidityChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C671D1BDA6D001FE3D6 /* SExpValidityChecker.m */; };
+		F367CFDC1D1E1D7100AF1993 /* SimpleUnicharInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C691D1BDA6D001FE3D6 /* SimpleUnicharInputStream.m */; };
 		F3926DD31D1CDFE600932F3E /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3926DD21D1CDFE600932F3E /* Fonts.swift */; };
 		F3926DD51D1CE2F100932F3E /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C7B1D1BDF4E001FE3D6 /* CGPoint.swift */; };
 		F3926DDA1D1CE2FF00932F3E /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C7D1D1BDF4E001FE3D6 /* Double.swift */; };
@@ -29,7 +70,6 @@
 		F3926DDF1D1CE30B00932F3E /* NSDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C7F1D1BDF4E001FE3D6 /* NSDate.swift */; };
 		F3926DE01D1CE38E00932F3E /* CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C7C1D1BDF4E001FE3D6 /* CGRect.swift */; };
 		F3926DE21D1CE4C400932F3E /* WeatherRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EFDE51D1BF8CA00797850 /* WeatherRecord.swift */; };
-		F3926DE51D1CE69500932F3E /* NSDate+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = F3926DE41D1CE69500932F3E /* NSDate+Additions.m */; };
 		F3926DE71D1CE87200932F3E /* ForecastCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EFE0F1D1CCE6800797850 /* ForecastCellView.swift */; };
 		F3926DE91D1CE9AC00932F3E /* UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3926DE81D1CE9AC00932F3E /* UIScrollView.swift */; };
 		F3926DEA1D1CEB0D00932F3E /* ForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31EFE0A1D1CCDD800797850 /* ForecastView.swift */; };
@@ -41,15 +81,9 @@
 		F3E47C591D1BD96E001FE3D6 /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C581D1BD96E001FE3D6 /* Views.swift */; };
 		F3E47C5C1D1BDA0A001FE3D6 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C5B1D1BDA0A001FE3D6 /* UIView.swift */; };
 		F3E47C5E1D1BDA3B001FE3D6 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C5D1D1BDA3B001FE3D6 /* Colors.swift */; };
-		F3E47C6A1D1BDA6D001FE3D6 /* SExp.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C611D1BDA6D001FE3D6 /* SExp.m */; };
-		F3E47C6B1D1BDA6D001FE3D6 /* SExpIO.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C631D1BDA6D001FE3D6 /* SExpIO.m */; };
-		F3E47C6C1D1BDA6D001FE3D6 /* SExpTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C651D1BDA6D001FE3D6 /* SExpTokenizer.m */; };
-		F3E47C6D1D1BDA6D001FE3D6 /* SExpValidityChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C671D1BDA6D001FE3D6 /* SExpValidityChecker.m */; };
-		F3E47C6E1D1BDA6D001FE3D6 /* SimpleUnicharInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C691D1BDA6D001FE3D6 /* SimpleUnicharInputStream.m */; };
 		F3E47C711D1BDAE2001FE3D6 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C701D1BDAE2001FE3D6 /* ColorPalette.swift */; };
 		F3E47C741D1BDAFE001FE3D6 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = F3E47C721D1BDAFE001FE3D6 /* fonts */; };
 		F3E47C751D1BDAFE001FE3D6 /* settings in Resources */ = {isa = PBXBuildFile; fileRef = F3E47C731D1BDAFE001FE3D6 /* settings */; };
-		F3E47C791D1BDBFE001FE3D6 /* NSMutableArray+Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C781D1BDBFE001FE3D6 /* NSMutableArray+Stack.m */; };
 		F3E47C881D1BDF4E001FE3D6 /* NSRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C801D1BDF4E001FE3D6 /* NSRange.swift */; };
 		F3E47C891D1BDF4E001FE3D6 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C811D1BDF4E001FE3D6 /* String.swift */; };
 		F3E47C8A1D1BDF4E001FE3D6 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E47C821D1BDF4E001FE3D6 /* UIColor.swift */; };
@@ -401,10 +435,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F367CFB51D1CF7AC00AF1993 /* Fonts.swift in Sources */,
+				F367CFB91D1CF7AC00AF1993 /* Colors.swift in Sources */,
+				F367CFC71D1CF7CE00AF1993 /* Double.swift in Sources */,
+				F367CFC61D1CF7CE00AF1993 /* CGRect.swift in Sources */,
+				F367CFB81D1CF7AC00AF1993 /* Features.swift in Sources */,
+				F367CFC31D1CF7C700AF1993 /* Math.swift in Sources */,
+				F367CFAF1D1CF79D00AF1993 /* Network.swift in Sources */,
+				F367CFAD1D1CF79600AF1993 /* WeatherRecord.swift in Sources */,
+				F367CFC11D1CF7C700AF1993 /* Top.swift in Sources */,
+				F367CFA91D1CF77F00AF1993 /* TopView.swift in Sources */,
+				F367CFD81D1E1D7100AF1993 /* SExp.m in Sources */,
+				F367CFD91D1E1D7100AF1993 /* SExpIO.m in Sources */,
+				F367CFAC1D1CF79100AF1993 /* ForecastView.swift in Sources */,
+				F367CFA81D1CF77B00AF1993 /* AppDelegate.swift in Sources */,
+				F367CFB61D1CF7AC00AF1993 /* Sizes.swift in Sources */,
+				F367CFCE1D1CF7CE00AF1993 /* UIView.swift in Sources */,
+				F367CFC41D1CF7C700AF1993 /* GCD.swift in Sources */,
+				F367CFD61D1E1D7100AF1993 /* NSDate+Additions.m in Sources */,
+				F367CFC91D1CF7CE00AF1993 /* NSDate.swift in Sources */,
+				F367CFCA1D1CF7CE00AF1993 /* NSRange.swift in Sources */,
+				F367CFC81D1CF7CE00AF1993 /* Int.swift in Sources */,
 				F31EFE0C1D1CCDD800797850 /* ForecastCell.swift in Sources */,
-				F31EFE041D1CC42B00797850 /* Sizes.swift in Sources */,
+				F367CFCC1D1CF7CE00AF1993 /* UIColor.swift in Sources */,
+				F367CFAE1D1CF79900AF1993 /* Configuration.swift in Sources */,
+				F367CFCD1D1CF7CE00AF1993 /* UIScrollView.swift in Sources */,
+				F367CFB11D1CF7A500AF1993 /* Views.swift in Sources */,
+				F367CFAB1D1CF78D00AF1993 /* ForecastCellView.swift in Sources */,
 				F31EFDEF1D1C6A4400797850 /* OpenWeatherCTTests.swift in Sources */,
-				F31EFE001D1CBF7F00797850 /* Presets.swift in Sources */,
+				F367CFD71D1E1D7100AF1993 /* NSMutableArray+Stack.m in Sources */,
+				F367CFDB1D1E1D7100AF1993 /* SExpValidityChecker.m in Sources */,
+				F367CFC21D1CF7C700AF1993 /* ColorPalette.swift in Sources */,
+				F367CFAA1D1CF78300AF1993 /* ForecastLoader.swift in Sources */,
+				F367CFDA1D1E1D7100AF1993 /* SExpTokenizer.m in Sources */,
+				F367CFCB1D1CF7CE00AF1993 /* String.swift in Sources */,
+				F367CFB01D1CF7A100AF1993 /* Loader.swift in Sources */,
+				F367CFDC1D1E1D7100AF1993 /* SimpleUnicharInputStream.m in Sources */,
+				F367CFB71D1CF7AC00AF1993 /* Presets.swift in Sources */,
+				F367CFC51D1CF7CE00AF1993 /* CGPoint.swift in Sources */,
 				F31EFDFA1D1CB8B400797850 /* WellKnown.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,12 +484,11 @@
 				F3E47C5C1D1BDA0A001FE3D6 /* UIView.swift in Sources */,
 				F3E47C8A1D1BDF4E001FE3D6 /* UIColor.swift in Sources */,
 				F31EFDDB1D1BECAA00797850 /* Network.swift in Sources */,
+				F367CFD51D1E1D7000AF1993 /* SimpleUnicharInputStream.m in Sources */,
 				F3926DD51D1CE2F100932F3E /* CGPoint.swift in Sources */,
-				F3E47C6D1D1BDA6D001FE3D6 /* SExpValidityChecker.m in Sources */,
 				F3E47C891D1BDF4E001FE3D6 /* String.swift in Sources */,
 				F3926DE01D1CE38E00932F3E /* CGRect.swift in Sources */,
 				F31EFDF71D1CB23400797850 /* Configuration.swift in Sources */,
-				F3E47C791D1BDBFE001FE3D6 /* NSMutableArray+Stack.m in Sources */,
 				F3926DEA1D1CEB0D00932F3E /* ForecastView.swift in Sources */,
 				F31EFE031D1CC42B00797850 /* Sizes.swift in Sources */,
 				F3926DE71D1CE87200932F3E /* ForecastCellView.swift in Sources */,
@@ -431,24 +498,25 @@
 				F3926DDC1D1CE30300932F3E /* Int.swift in Sources */,
 				F31EFE0B1D1CCDD800797850 /* ForecastCell.swift in Sources */,
 				F3926DD31D1CDFE600932F3E /* Fonts.swift in Sources */,
+				F367CFD41D1E1D7000AF1993 /* SExpValidityChecker.m in Sources */,
 				F31EFDFF1D1CBF7F00797850 /* Presets.swift in Sources */,
-				F3E47C6B1D1BDA6D001FE3D6 /* SExpIO.m in Sources */,
+				F367CFD31D1E1D7000AF1993 /* SExpTokenizer.m in Sources */,
+				F367CFD11D1E1D7000AF1993 /* SExp.m in Sources */,
 				F3E47C881D1BDF4E001FE3D6 /* NSRange.swift in Sources */,
-				F3E47C6A1D1BDA6D001FE3D6 /* SExp.m in Sources */,
 				F3E47C8D1D1BDF92001FE3D6 /* Math.swift in Sources */,
 				F3926DDF1D1CE30B00932F3E /* NSDate.swift in Sources */,
-				F3926DE51D1CE69500932F3E /* NSDate+Additions.m in Sources */,
 				F3926DE91D1CE9AC00932F3E /* UIScrollView.swift in Sources */,
 				F31EFDDE1D1BF19A00797850 /* GCD.swift in Sources */,
+				F367CFCF1D1E1D7000AF1993 /* NSDate+Additions.m in Sources */,
 				F31EFDE01D1BF42600797850 /* Features.swift in Sources */,
 				F3926DE21D1CE4C400932F3E /* WeatherRecord.swift in Sources */,
 				F3E47C571D1BD900001FE3D6 /* TopView.swift in Sources */,
-				F3E47C6E1D1BDA6D001FE3D6 /* SimpleUnicharInputStream.m in Sources */,
 				F3E47C551D1BD87A001FE3D6 /* AppDelegate.swift in Sources */,
 				F3E47C521D1BD86C001FE3D6 /* Top.swift in Sources */,
-				F3E47C6C1D1BDA6D001FE3D6 /* SExpTokenizer.m in Sources */,
 				F31EFE011D1CBF9300797850 /* ForecastLoader.swift in Sources */,
 				F31EFDE41D1BF85100797850 /* Loader.swift in Sources */,
+				F367CFD21D1E1D7000AF1993 /* SExpIO.m in Sources */,
+				F367CFD01D1E1D7000AF1993 /* NSMutableArray+Stack.m in Sources */,
 				F3926DDA1D1CE2FF00932F3E /* Double.swift in Sources */,
 				F3E47C711D1BDAE2001FE3D6 /* ColorPalette.swift in Sources */,
 			);
@@ -484,6 +552,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.cantabilabs.OpenWeatherCTTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OpenWeatherCT/OWSources/OpenWeatherCT-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenWeatherCT.app/OpenWeatherCT";
 			};
 			name = Debug;
@@ -496,6 +565,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.cantabilabs.OpenWeatherCTTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OpenWeatherCT/OWSources/OpenWeatherCT-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenWeatherCT.app/OpenWeatherCT";
 			};
 			name = Release;
@@ -541,6 +611,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "OpenWeatherCT/OWSources/OpenWeatherCT-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -579,6 +650,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "OpenWeatherCT/OWSources/OpenWeatherCT-Bridging-Header.h";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

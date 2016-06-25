@@ -6,6 +6,8 @@
 //  Copyright © 2016 Cantabilabs Ltd. All rights reserved.
 //
 
+import QuartzCore
+import CoreGraphics
 import Foundation
 
 struct Sizes {
